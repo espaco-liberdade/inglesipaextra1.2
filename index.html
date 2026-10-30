@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aula Extra 1: Mega Guia de Verbos Confusos e Estruturas Avançadas (Parte 2)</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET E BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- TIPOGRAFIA --- */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #9b59b6;
+            line-height: 1.3;
+        }
+        
+        h2 { 
+            color: #2c3e50; 
+            margin-top: 40px; 
+            margin-bottom: 15px; 
+            font-size: 1.6rem; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 5px; 
+            page-break-after: avoid;
+        }
+        
+        p, li { font-size: 1rem; margin-bottom: 12px; color: #444; }
+        
+        .emoji-large { font-size: 1.5rem; }
+        .emoji-small { font-size: 1.2rem; }
+
+        /* --- DESTAQUES E CAIXAS --- */
+        .theme-intro, .nota-dica {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid transparent;
+            page-break-inside: avoid;
+        }
+
+        .theme-intro { background-color: #f4ecf7; border-left-color: #9b59b6; }
+        .nota-dica { background-color: #fff3cd; border-left-color: #ffc107; color: #856404; }
+        .nota-dica h4 { margin-bottom: 8px; color: #856404; }
+
+        .example-word { color: #8e44ad; font-weight: 700; text-decoration: underline; }
+        .connective { color: #d35400; font-weight: bold; background-color: #fbeee6; padding: 0 4px; border-radius: 4px; }
+        
+        /* --- ESTILOS DE IPA E PRONÚNCIA --- */
+        .ipa-symbol {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #e74c3c;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .character-portuguese-phonetics {
+            display: block;
+            color: #27ae60;
+            font-style: italic;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+        }
+
+        /* --- TABELAS --- */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) { background-color: #fafafa; }
+        tr:hover { background-color: #f1f5f9; }
+
+        .details-translation {
+            display: block;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #ddd;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* --- BOTÕES --- */
+        .nav-btn {
+            display: block;
+            width: 100%;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            margin: 15px 0 25px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .audio-btn-inline {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            vertical-align: middle;
+            margin-left: 8px;
+            padding: 5px;
+            transition: transform 0.1s;
+        }
+        .audio-btn-inline:active { transform: scale(0.9); }
+
+        /* --- QUIZ INTERATIVO --- */
+        .quiz-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            page-break-inside: avoid;
+        }
+        .quiz-question { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .quiz-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 2px solid #e0e0e0;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quiz-btn:hover:not(:disabled) { border-color: #3498db; background-color: #f0f8ff; }
+        .quiz-btn.correct { background-color: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .quiz-btn.incorrect { background-color: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .quiz-feedback { margin-top: 10px; font-size: 0.9rem; font-weight: bold; display: none; }
+
+        /* --- IMPRESSÃO A4 --- */
+        @media print {
+            body { background-color: #fff; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .nav-btn, .audio-btn-inline { display: none !important; }
+            table, tr, .nota-dica, .theme-intro { page-break-inside: avoid; }
+            th { background-color: #ddd !important; color: #000 !important; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu</button>
+        
+        <h1>Aula Extra 1: Mega Guia de Verbos Confusos (Parte 2) <span class="emoji-large">🚀🧠</span><br>
+            <span style="font-size: 0.7em; font-weight: normal; color: #555;">(The Ultimate Guide to Tricky Verbs - Intermediário a Avançado)</span>
+        </h1>
+        
+        <div class="theme-intro">
+            <p><strong>Bem-vindo(a) à Parte 2 da nossa imersão!</strong> <span class="emoji-small">📖</span></p>
+            <p>Se você dominou Get, Take, Make, Do e Have, agora é a vez dos gigantes da comunicação e movimento: <strong>GO, COME, SEE, KNOW e SAY</strong>. Vamos explorar como eles funcionam no passado perfeito, na voz passiva, condicionais e expressões avançadas muito usadas por nativos.</p>
+            <p><strong>Legenda de cores:</strong> Conectivos estão em <span class="connective">laranja</span> e os verbos em foco em <span class="example-word">roxo</span>.</p>
+        </div>
+        
+        <!-- ================= VERBO 6: GO ================= -->
+        <h2>6. GO (Ir, Partir, Tornar-se, Funcionar...)</h2>
+        
+        <div class="nota-dica">
+            <h4>🚨 Não Confunda: GO vs. COME</h4>
+            <ul>
+                <li><strong>Direção:</strong> "Go" afasta do falante (Ir). "Come" aproxima (Vir). (Ex: <em>I am going to you</em> = Eu estou indo até você. - Nativos dizem <em>I am coming to you</em>, porque o ponto de referência é o destino).</li>
+                <li><strong>Mudança Negativa:</strong> Em inglês falado, "Go" + Adjetivo frequentemente indica mudança para pior. (Ex: Go bad = estragar; Go crazy = enlouquecer; Go blind = ficar cego).</li>
+                <li><strong>Gone vs Been:</strong> "He has gone to London" (Ele foi e ainda está lá). "He has been to London" (Ele foi e já voltou).</li>
+            </ul>
+        </div>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="connective">By the time</span> we arrived, she <span class="example-word">had</span> already <span class="example-word">gone</span>. <button class="audio-btn-inline" onclick="playAudio('By the time we arrived, she had already gone.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/baɪ ðə taɪm... hæd ˈɔːlredi ɡɔːn/</span><br><span class="character-portuguese-phonetics">(bái dhã TÁIM... réd ól-RÉ-di GÓN)</span><span class="details-translation"><strong>Quando</strong> chegamos, ela já <strong>tinha ido embora</strong>. (Past Perfect)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Even though</span> it is late, the show must <span class="example-word">go on</span>. <button class="audio-btn-inline" onclick="playAudio('Even though it is late, the show must go on.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈiːvən ðoʊ... ɡoʊ ɑːn/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn dhôu... GÔU ÓN)</span><span class="details-translation"><strong>Embora</strong> seja tarde, o show deve <strong>continuar</strong>. (Phrasal verb: go on)</span></td>
+                    </tr>
+                    <tr>
+                        <td>If he had the money, he <span class="example-word">would go</span> to Japan <span class="connective">immediately</span>. <button class="audio-btn-inline" onclick="playAudio('If he had the money, he would go to Japan immediately.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wʊd ɡoʊ... ɪˈmiːdiətli/</span><br><span class="character-portuguese-phonetics">(uúd GÔU... i-MÍI-diãt-li)</span><span class="details-translation">Se ele tivesse o dinheiro, ele <strong>iria</strong> ao Japão <strong>imediatamente</strong>. (2nd Conditional)</span></td>
+                    </tr>
+                    <tr>
+                        <td>The milk <span class="example-word">went bad</span> <span class="connective">because</span> you left it outside the fridge. <button class="audio-btn-inline" onclick="playAudio('The milk went bad because you left it outside the fridge.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/went bæd bɪˈkəz/</span><br><span class="character-portuguese-phonetics">(uént BÉD bi-CÂZ)</span><span class="details-translation">O leite <strong>estragou (ficou ruim)</strong> <strong>porque</strong> você o deixou fora da geladeira.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Furthermore</span>, we need to <span class="example-word">go over</span> the report again. <button class="audio-btn-inline" onclick="playAudio('Furthermore, we need to go over the report again.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈfɜːrðərmɔːr... ɡoʊ ˈoʊvər/</span><br><span class="character-portuguese-phonetics">(FÃR-dhãr-mor... GÔU ÔU-vãr)</span><span class="details-translation"><strong>Além disso</strong>, precisamos <strong>revisar / passar a limpo</strong> o relatório novamente.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Unless</span> the pain <span class="example-word">goes away</span>, you should see a doctor. <button class="audio-btn-inline" onclick="playAudio('Unless the pain goes away, you should see a doctor.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ənˈles... ɡoʊz əˈweɪ/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS... GÔUZ ã-UÊI)</span><span class="details-translation"><strong>A menos que</strong> a dor <strong>passe / vá embora</strong>, você deveria consultar um médico.</span></td>
+                    </tr>
+                    <tr>
+                        <td>The bomb <span class="example-word">went off</span> <span class="connective">while</span> people were sleeping. <button class="audio-btn-inline" onclick="playAudio('The bomb went off while people were sleeping.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/went ɔːf waɪl/</span><br><span class="character-portuguese-phonetics">(uént ÓF uáil)</span><span class="details-translation">A bomba <strong>explodiu (disparou)</strong> <strong>enquanto</strong> as pessoas estavam dormindo. (Go off = disparar alarme, explodir).</span></td>
+                    </tr>
+                    <tr>
+                        <td>She <span class="example-word">will have gone</span> through the entire training <span class="connective">by</span> next month. <button class="audio-btn-inline" onclick="playAudio('She will have gone through the entire training by next month.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɪl həv ɡɔːn θruː... baɪ/</span><br><span class="character-portuguese-phonetics">(uêl ræv GÓN THRÚU... bái)</span><span class="details-translation">Ela <strong>terá passado por (concluído)</strong> todo o treinamento <strong>até</strong> o mês que vem. (Future Perfect)</span></td>
+                    </tr>
+                    <tr>
+                        <td>He <span class="example-word">has been going through</span> a tough time <span class="connective">lately</span>. <button class="audio-btn-inline" onclick="playAudio('He has been going through a tough time lately.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæz bɪn ˈɡoʊɪŋ θruː... ˈleɪtli/</span><br><span class="character-portuguese-phonetics">(réz bên GÔU-in THRÚU... LÊIT-li)</span><span class="details-translation">Ele <strong>tem passado por</strong> um momento difícil <strong>ultimamente</strong>. (Present Perfect Continuous)</span></td>
+                    </tr>
+                    <tr>
+                        <td>I really wish I <span class="example-word">could go</span> back in time <span class="connective">to fix</span> things. <button class="audio-btn-inline" onclick="playAudio('I really wish I could go back in time to fix things.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɪʃ aɪ kʊd ɡoʊ bæk/</span><br><span class="character-portuguese-phonetics">(UÊSH ái cúd GÔU BÉK)</span><span class="details-translation">Eu realmente queria que eu <strong>pudesse voltar</strong> no tempo <strong>para consertar</strong> as coisas.</span></td>
+                    </tr>
+                    <tr>
+                        <td>They <span class="example-word">are going</span> crazy <span class="connective">because of</span> the endless noise. <button class="audio-btn-inline" onclick="playAudio('They are going crazy because of the endless noise.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɑːr ˈɡoʊɪŋ ˈkreɪzi bɪˈkəz əv/</span><br><span class="character-portuguese-phonetics">(ár GÔU-in CRÊI-zi bi-CÂZ ãv)</span><span class="details-translation">Eles <strong>estão ficando</strong> loucos <strong>por causa do</strong> barulho sem fim. (Mudança de estado).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Provided that</span> everything <span class="example-word">goes</span> well, we will sign the contract. <button class="audio-btn-inline" onclick="playAudio('Provided that everything goes well, we will sign the contract.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/prəˈvaɪdɪd ðæt... ɡoʊz wel/</span><br><span class="character-portuguese-phonetics">(prõ-VÁI-dêd dhét... GÔUZ uél)</span><span class="details-translation"><strong>Contanto que</strong> tudo <strong>corra/vá</strong> bem, nós assinaremos o contrato.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Therefore</span>, we must <span class="example-word">go ahead</span> with the new strategy. <button class="audio-btn-inline" onclick="playAudio('Therefore, we must go ahead with the new strategy.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈðerfɔːr... ɡoʊ əˈhed/</span><br><span class="character-portuguese-phonetics">(DHÉR-for... GÔU ã-RÉD)</span><span class="details-translation"><strong>Portanto</strong>, devemos <strong>prosseguir (ir em frente)</strong> com a nova estratégia.</span></td>
+                    </tr>
+                    <tr>
+                        <td>I usually <span class="example-word">go without</span> breakfast <span class="connective">when</span> I am in a hurry. <button class="audio-btn-inline" onclick="playAudio('I usually go without breakfast when I am in a hurry.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɡoʊ wɪˈðaʊt... wen/</span><br><span class="character-portuguese-phonetics">(GÔU uí-DHÁUT... uén)</span><span class="details-translation">Eu geralmente <strong>fico sem</strong> o café da manhã <strong>quando</strong> estou com pressa.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Regardless of</span> the risk, she decided to <span class="example-word">go for</span> it. <button class="audio-btn-inline" onclick="playAudio('Regardless of the risk, she decided to go for it.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/rɪˈɡɑːrdləs əv... ɡoʊ fɔːr ɪt/</span><br><span class="character-portuguese-phonetics">(ri-GÁRD-lês ãv... GÔU fór êt)</span><span class="details-translation"><strong>Independentemente do</strong> risco, ela decidiu <strong>tentar / se jogar (ir atrás)</strong>.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= VERBO 7: COME ================= -->
+        <h2>7. COME (Vir, Chegar, Acontecer, Resultar...)</h2>
+        
+        <div class="nota-dica">
+            <h4>🚨 Phrasal Verbs Essenciais com COME</h4>
+            <ul>
+                <li><strong>Come up with:</strong> Inventar, ter uma ideia. (Ex: <em>He came up with a great plan</em>).</li>
+                <li><strong>Come across:</strong> Deparar-se por acaso, encontrar sem querer.</li>
+                <li><strong>Come down with:</strong> Ficar doente (Ex: <em>I came down with a cold</em> = Eu peguei um resfriado).</li>
+            </ul>
+        </div>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>He managed to <span class="example-word">come up with</span> a brilliant idea <span class="connective">despite</span> the pressure. <button class="audio-btn-inline" onclick="playAudio('He managed to come up with a brilliant idea despite the pressure.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/kʌm ʌp wɪθ... dɪˈspaɪt/</span><br><span class="character-portuguese-phonetics">(CÂM ÂP uêth... di-SPÁIT)</span><span class="details-translation">Ele conseguiu <strong>inventar (surgir com)</strong> uma ideia brilhante <strong>apesar da</strong> pressão.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">While</span> I was cleaning the attic, I <span class="example-word">came across</span> some old photos. <button class="audio-btn-inline" onclick="playAudio('While I was cleaning the attic, I came across some old photos.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/waɪl... keɪm əˈkrɔːs/</span><br><span class="character-portuguese-phonetics">(uáil... KÊIM ã-CRÓS)</span><span class="details-translation"><strong>Enquanto</strong> eu limpava o sótão, eu <strong>me deparei com / encontrei</strong> algumas fotos velhas.</span></td>
+                    </tr>
+                    <tr>
+                        <td>She <span class="example-word">has come</span> a long way <span class="connective">since</span> she started learning English. <button class="audio-btn-inline" onclick="playAudio('She has come a long way since she started learning English.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæz kʌm ə lɔːŋ weɪ sɪns/</span><br><span class="character-portuguese-phonetics">(réz CÂM ã LONG uêi SÊNS)</span><span class="details-translation">Ela <strong>progrediu muito (veio um longo caminho)</strong> <strong>desde que</strong> começou a aprender inglês.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Had they invited</span> me, I <span class="example-word">would have come</span> to the wedding. <button class="audio-btn-inline" onclick="playAudio('Had they invited me, I would have come to the wedding.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæd ðeɪ... wʊd həv kʌm/</span><br><span class="character-portuguese-phonetics">(réd dhêi... uúd ræv CÂM)</span><span class="details-translation"><strong>Tivessem eles me convidado (Se eles tivessem...)</strong>, eu <strong>teria vindo</strong> ao casamento.</span></td>
+                    </tr>
+                    <tr>
+                        <td>The true cost of the project only <span class="example-word">came to light</span> <span class="connective">after</span> the audit. <button class="audio-btn-inline" onclick="playAudio('The true cost of the project only came to light after the audit.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/keɪm tə laɪt ˈæftər/</span><br><span class="character-portuguese-phonetics">(KÊIM tã LÁIT ÉF-tãr)</span><span class="details-translation">O verdadeiro custo do projeto só <strong>veio à tona (foi revelado)</strong> <strong>depois</strong> da auditoria.</span></td>
+                    </tr>
+                    <tr>
+                        <td>I won't give up, <span class="example-word">come</span> what may. <button class="audio-btn-inline" onclick="playAudio('I won\'t give up, come what may.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/kʌm wʌt meɪ/</span><br><span class="character-portuguese-phonetics">(CÂM uót mêi)</span><span class="details-translation">Eu não vou desistir, <strong>haja o que houver (venha o que vier)</strong>. (Expressão)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Unless</span> you <span class="example-word">come clean</span> about the mistake, you will be fired. <button class="audio-btn-inline" onclick="playAudio('Unless you come clean about the mistake, you will be fired.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ənˈles... kʌm kliːn/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS... CÂM CLÍIN)</span><span class="details-translation"><strong>A menos que</strong> você <strong>confesse (fale a verdade)</strong> sobre o erro, você será demitido.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Consequently</span>, their dream of expanding <span class="example-word">came true</span>. <button class="audio-btn-inline" onclick="playAudio('Consequently, their dream of expanding came true.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈkɑːnsəkwentli... keɪm truː/</span><br><span class="character-portuguese-phonetics">(CÓN-sẽ-cuênt-li... KÊIM TRÚU)</span><span class="details-translation"><strong>Consequentemente</strong>, o sonho deles de expandir <strong>se tornou realidade</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He <span class="example-word">came down with</span> a terrible flu <span class="connective">right before</span> the trip. <button class="audio-btn-inline" onclick="playAudio('He came down with a terrible flu right before the trip.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/keɪm daʊn wɪθ... raɪt bɪˈfɔːr/</span><br><span class="character-portuguese-phonetics">(KÊIM DÁUN uêth... ráit bi-FÓR)</span><span class="details-translation">Ele <strong>pegou / adoeceu de</strong> uma gripe terrível <strong>bem antes</strong> da viagem.</span></td>
+                    </tr>
+                    <tr>
+                        <td>When it <span class="example-word">comes to</span> making deals, she is the best. <button class="audio-btn-inline" onclick="playAudio('When it comes to making deals, she is the best.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wen ɪt kʌmz tuː/</span><br><span class="character-portuguese-phonetics">(uén êt CÂMZ túu)</span><span class="details-translation"><strong>Quando se trata de</strong> fazer acordos, ela é a melhor. (Expressão de transição).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Even if</span> he begs, she won't <span class="example-word">come back</span> to him. <button class="audio-btn-inline" onclick="playAudio('Even if he begs, she won\'t come back to him.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈiːvən ɪf... kʌm bæk/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn êf... CÂM BÉK)</span><span class="details-translation"><strong>Mesmo se</strong> ele implorar, ela não vai <strong>voltar</strong> para ele.</span></td>
+                    </tr>
+                    <tr>
+                        <td>Their argument eventually <span class="example-word">came to an end</span>. <button class="audio-btn-inline" onclick="playAudio('Their argument eventually came to an end.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪˈventʃuəli keɪm tuː ən end/</span><br><span class="character-portuguese-phonetics">(i-VÉN-tchu-a-li KÊIM túu ãn ÉND)</span><span class="details-translation">A discussão deles finalmente <strong>chegou ao fim</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Although</span> they lost the first game, they <span class="example-word">came from behind</span> to win the championship. <button class="audio-btn-inline" onclick="playAudio('Although they lost the first game, they came from behind to win the championship.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... keɪm frəm bɪˈhaɪnd/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... KÊIM frãm bi-RÁIND)</span><span class="details-translation"><strong>Embora</strong> tenham perdido o primeiro jogo, eles <strong>viraram o jogo (vieram de trás)</strong> para vencer o campeonato.</span></td>
+                    </tr>
+                    <tr>
+                        <td>We thought the car was broken, but it <span class="example-word">came back to life</span>. <button class="audio-btn-inline" onclick="playAudio('We thought the car was broken, but it came back to life.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/keɪm bæk tə laɪf/</span><br><span class="character-portuguese-phonetics">(KÊIM BÉK tã LÁIF)</span><span class="details-translation">Nós achamos que o carro estava quebrado, mas ele <strong>voltou à vida (voltou a funcionar)</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Therefore</span>, I suggest we cross that bridge when we <span class="example-word">come to it</span>. <button class="audio-btn-inline" onclick="playAudio('Therefore, I suggest we cross that bridge when we come to it.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈðerfɔːr... kʌm tuː ɪt/</span><br><span class="character-portuguese-phonetics">(DHÉR-for... CÂM túu êt)</span><span class="details-translation"><strong>Portanto</strong>, sugiro que resolvamos esse problema quando <strong>chegarmos lá (expressão)</strong>.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= VERBO 8: SEE ================= -->
+        <h2>8. SEE (Ver, Entender, Descobrir, Encontrar-se com...)</h2>
+        
+        <div class="nota-dica">
+            <h4>🚨 Não Confunda: SEE vs. LOOK vs. WATCH</h4>
+            <ul>
+                <li><strong>SEE:</strong> Capacidade passiva de enxergar; perceber algo com os olhos. Também significa <em>entender</em> (Ex: "Oh, I see!" = "Ah, entendi!").</li>
+                <li><strong>LOOK:</strong> Olhar intencionalmente para algo estático. (Ex: Look at this picture).</li>
+                <li><strong>WATCH:</strong> Assistir ou observar algo em movimento ou por um período de tempo. (Ex: Watch TV, watch a game).</li>
+            </ul>
+        </div>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="connective">Seeing that</span> you are busy, I will come back later. <button class="audio-btn-inline" onclick="playAudio('Seeing that you are busy, I will come back later.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈsiːɪŋ ðæt/</span><br><span class="character-portuguese-phonetics">(SÍI-in dhét)</span><span class="details-translation"><strong>Visto que (Já que)</strong> você está ocupado, eu voltarei mais tarde.</span></td>
+                    </tr>
+                    <tr>
+                        <td>We rarely <span class="example-word">see eye to eye</span> on political issues. <button class="audio-btn-inline" onclick="playAudio('We rarely see eye to eye on political issues.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/siː aɪ tuː aɪ/</span><br><span class="character-portuguese-phonetics">(SÍI ái túu ái)</span><span class="details-translation">Nós raramente <strong>concordamos (vemos olho no olho)</strong> em questões políticas.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">By the time</span> she realized the scam, she <span class="example-word">had</span> already <span class="example-word">seen</span> her money disappear. <button class="audio-btn-inline" onclick="playAudio('By the time she realized the scam, she had already seen her money disappear.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/baɪ ðə taɪm... hæd ˈɔːlredi siːn/</span><br><span class="character-portuguese-phonetics">(bái dhã TÁIM... réd ól-RÉ-di SÍIN)</span><span class="details-translation"><strong>Quando</strong> ela percebeu o golpe, ela já <strong>tinha visto</strong> seu dinheiro desaparecer. (Past Perfect)</span></td>
+                    </tr>
+                    <tr>
+                        <td>I can't <span class="example-word">see myself</span> living in another country <span class="connective">even if</span> I had the chance. <button class="audio-btn-inline" onclick="playAudio('I can\'t see myself living in another country even if I had the chance.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/kænt siː maɪˈself... ˈiːvən ɪf/</span><br><span class="character-portuguese-phonetics">(ként SÍI mai-SÉLF... ÍI-vãn êf)</span><span class="details-translation">Eu não consigo <strong>me ver (me imaginar)</strong> morando em outro país <strong>mesmo se</strong> eu tivesse a chance.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Furthermore</span>, we need to <span class="example-word">see to it</span> that all rules are followed. <button class="audio-btn-inline" onclick="playAudio('Furthermore, we need to see to it that all rules are followed.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈfɜːrðərmɔːr... siː tuː ɪt/</span><br><span class="character-portuguese-phonetics">(FÃR-dhãr-mor... SÍI túu êt)</span><span class="details-translation"><strong>Além disso</strong>, precisamos <strong>garantir / cuidar disso</strong> para que todas as regras sejam seguidas.</span></td>
+                    </tr>
+                    <tr>
+                        <td>If I had paid more attention, I <span class="example-word">would have seen</span> the warning signs. <button class="audio-btn-inline" onclick="playAudio('If I had paid more attention, I would have seen the warning signs.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wʊd həv siːn/</span><br><span class="character-portuguese-phonetics">(uúd ræv SÍIN)</span><span class="details-translation">Se eu tivesse prestado mais atenção, eu <strong>teria visto</strong> os sinais de alerta. (3rd Conditional)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Despite</span> the darkness, he could <span class="example-word">see through</span> their lies. <button class="audio-btn-inline" onclick="playAudio('Despite the darkness, he could see through their lies.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/dɪˈspaɪt... kʊd siː θruː/</span><br><span class="character-portuguese-phonetics">(di-SPÁIT... cúd SÍI THRÚU)</span><span class="details-translation"><strong>Apesar da</strong> escuridão (figurativa), ele conseguia <strong>enxergar através (perceber)</strong> as mentiras deles.</span></td>
+                    </tr>
+                    <tr>
+                        <td>Let me <span class="example-word">see if</span> I understood you correctly. <button class="audio-btn-inline" onclick="playAudio('Let me see if I understood you correctly.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/let miː siː ɪf/</span><br><span class="character-portuguese-phonetics">(lét míi SÍI êf)</span><span class="details-translation">Deixe-me <strong>ver / verificar se</strong> eu entendi você corretamente.</span></td>
+                    </tr>
+                    <tr>
+                        <td>She is <span class="example-word">seeing someone</span> new <span class="connective">since</span> her divorce. <button class="audio-btn-inline" onclick="playAudio('She is seeing someone new since her divorce.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz ˈsiːɪŋ ˈsʌmwʌn... sɪns/</span><br><span class="character-portuguese-phonetics">(êz SÍI-in SÂM-uãn... SÊNS)</span><span class="details-translation">Ela está <strong>saindo/namorando com alguém</strong> novo <strong>desde</strong> o seu divórcio. (See = date).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Unless</span> they <span class="example-word">see</span> a return on investment, they won't fund the project. <button class="audio-btn-inline" onclick="playAudio('Unless they see a return on investment, they won\'t fund the project.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ənˈles ðeɪ siː/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS dhêi SÍI)</span><span class="details-translation"><strong>A menos que</strong> eles <strong>vejam</strong> um retorno sobre o investimento, eles não financiarão o projeto.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">As long as</span> you can <span class="example-word">see the big picture</span>, the details don't matter. <button class="audio-btn-inline" onclick="playAudio('As long as you can see the big picture, the details don\'t matter.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/æz lɔːŋ æz... siː ðə bɪɡ ˈpɪktʃər/</span><br><span class="character-portuguese-phonetics">(éz LONG éz... SÍI dhã BÊG PÊK-tchãr)</span><span class="details-translation"><strong>Contanto que</strong> você consiga <strong>ver o quadro geral</strong>, os detalhes não importam.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He hasn't <span class="example-word">been seen</span> in public <span class="connective">for</span> over a decade. <button class="audio-btn-inline" onclick="playAudio('He hasn\'t been seen in public for over a decade.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈhæznt bɪn siːn... fɔːr/</span><br><span class="character-portuguese-phonetics">(RÉ-zãnt bên SÍIN... fór)</span><span class="details-translation">Ele não <strong>tem sido visto (foi visto)</strong> em público <strong>por</strong> mais de uma década. (Passive Voice + Present Perfect).</span></td>
+                    </tr>
+                    <tr>
+                        <td>We will <span class="example-word">see off</span> our friends at the airport <span class="connective">tomorrow</span>. <button class="audio-btn-inline" onclick="playAudio('We will see off our friends at the airport tomorrow.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɪl siː ɔːf/</span><br><span class="character-portuguese-phonetics">(uêl SÍI ÓF)</span><span class="details-translation">Nós iremos <strong>nos despedir de (acompanhar até a partida)</strong> nossos amigos no aeroporto <strong>amanhã</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Therefore</span>, it remains to <span class="example-word">be seen</span> whether this will work. <button class="audio-btn-inline" onclick="playAudio('Therefore, it remains to be seen whether this will work.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈðerfɔːr ɪt rɪˈmeɪnz tə biː siːn/</span><br><span class="character-portuguese-phonetics">(DHÉR-for êt ri-MÊINZ tã bíi SÍIN)</span><span class="details-translation"><strong>Portanto</strong>, resta <strong>ver (descobrir no futuro)</strong> se isso vai funcionar.</span></td>
+                    </tr>
+                    <tr>
+                        <td>They <span class="example-word">were seen</span> running away <span class="connective">right after</span> the explosion. <button class="audio-btn-inline" onclick="playAudio('They were seen running away right after the explosion.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wər siːn ˈrʌnɪŋ... raɪt ˈæftər/</span><br><span class="character-portuguese-phonetics">(uãr SÍIN RÂ-nin... ráit ÉF-tãr)</span><span class="details-translation">Eles <strong>foram vistos</strong> fugindo correndo <strong>logo após</strong> a explosão. (Passive Voice).</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= VERBO 9: KNOW ================= -->
+        <h2>9. KNOW (Saber, Conhecer, Ter conhecimento...)</h2>
+        
+        <div class="nota-dica">
+            <h4>🚨 Não Confunda: KNOW vs. MEET</h4>
+            <p>Em inglês, você usa <strong>MEET</strong> quando conhece alguém pela primeira vez. <strong>KNOW</strong> é usado para dizer que você <em>já conhece</em> a pessoa de longa data ou para expressar conhecimento de um fato.<br>
+            Ex: "I want to <strong>meet</strong> your brother" (conhecer a primeira vez) vs "I have <strong>known</strong> him for years" (conheço de longa data).
+            </p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="connective">As far as</span> I <span class="example-word">know</span>, the meeting is still on. <button class="audio-btn-inline" onclick="playAudio('As far as I know, the meeting is still on.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/æz fɑːr æz aɪ noʊ/</span><br><span class="character-portuguese-phonetics">(éz FÁR éz ái NÔU)</span><span class="details-translation"><strong>Até onde (Pelo que)</strong> eu <strong>sei</strong>, a reunião ainda está confirmada.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Had I known</span> about her situation, I would have offered help. <button class="audio-btn-inline" onclick="playAudio('Had I known about her situation, I would have offered help.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæd aɪ noʊn/</span><br><span class="character-portuguese-phonetics">(RÉD ái NÔUN)</span><span class="details-translation"><strong>Tivesse eu sabido (Se eu soubesse)</strong> sobre a situação dela, eu teria oferecido ajuda.</span></td>
+                    </tr>
+                    <tr>
+                        <td>They <span class="example-word">have known</span> each other <span class="connective">since</span> kindergarten. <button class="audio-btn-inline" onclick="playAudio('They have known each other since kindergarten.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæv noʊn iːtʃ ˈʌðər sɪns/</span><br><span class="character-portuguese-phonetics">(rév NÔUN íitch Â-dhãr SÊNS)</span><span class="details-translation">Eles <strong>se conhecem</strong> <strong>desde</strong> o jardim de infância. (Present Perfect para tempo prolongado).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Moreover</span>, she <span class="example-word">knows how to</span> code in three programming languages. <button class="audio-btn-inline" onclick="playAudio('Moreover, she knows how to code in three programming languages.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/mɔːrˈoʊvər... noʊz haʊ tuː koʊd/</span><br><span class="character-portuguese-phonetics">(mor-ÔU-vãr... NÔUZ RÁU túu côud)</span><span class="details-translation"><strong>Além do mais</strong>, ela <strong>sabe (como)</strong> programar em três linguagens de programação. (Saber fazer algo).</span></td>
+                    </tr>
+                    <tr>
+                        <td>I didn't <span class="example-word">know</span> <span class="connective">whether</span> to laugh or cry. <button class="audio-btn-inline" onclick="playAudio('I didn\'t know whether to laugh or cry.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈdɪdnt noʊ ˈweðər/</span><br><span class="character-portuguese-phonetics">(DÊ-dãnt NÔU UÉ-dhãr)</span><span class="details-translation">Eu não <strong>sabia</strong> <strong>se</strong> devia rir ou chorar. (Whether = se para opções/alternativas).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Although</span> he claims ignorance, I am sure he <span class="example-word">knew</span> everything. <button class="audio-btn-inline" onclick="playAudio('Although he claims ignorance, I am sure he knew everything.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... nuː ˈevriθɪŋ/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... NÚU E-vri-thin)</span><span class="details-translation"><strong>Embora</strong> ele alegue ignorância, tenho certeza que ele <strong>sabia</strong> de tudo.</span></td>
+                    </tr>
+                    <tr>
+                        <td>It is a <span class="example-word">well-known</span> fact that smoking causes cancer. <button class="audio-btn-inline" onclick="playAudio('It is a well-known fact that smoking causes cancer.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wel noʊn fækt/</span><br><span class="character-portuguese-phonetics">(uél NÔUN fékt)</span><span class="details-translation">É um fato <strong>muito conhecido</strong> que fumar causa câncer. (Adjetivo composto).</span></td>
+                    </tr>
+                    <tr>
+                        <td>You <span class="example-word">never know</span> what might happen <span class="connective">unless</span> you try. <button class="audio-btn-inline" onclick="playAudio('You never know what might happen unless you try.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈnevər noʊ... ənˈles/</span><br><span class="character-portuguese-phonetics">(NÉ-vãr NÔU... ãn-LÉS)</span><span class="details-translation">Você <strong>nunca sabe</strong> o que pode acontecer <strong>a menos que</strong> você tente.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He <span class="example-word">is known for</span> his exceptional negotiation skills. <button class="audio-btn-inline" onclick="playAudio('He is known for his exceptional negotiation skills.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz noʊn fɔːr/</span><br><span class="character-portuguese-phonetics">(êz NÔUN fór)</span><span class="details-translation">Ele <strong>é conhecido por</strong> suas habilidades excepcionais de negociação. (Voz Passiva).</span></td>
+                    </tr>
+                    <tr>
+                        <td>Before I <span class="example-word">knew it</span>, the year was already over. <button class="audio-btn-inline" onclick="playAudio('Before I knew it, the year was already over.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/bɪˈfɔːr aɪ nuː ɪt/</span><br><span class="character-portuguese-phonetics">(bi-FÓR ái NÚU êt)</span><span class="details-translation">Antes que eu <strong>percebesse (soubesse)</strong>, o ano já tinha acabado. (Expressão).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Consequently</span>, we are <span class="example-word">in the know</span> about the upcoming merger. <button class="audio-btn-inline" onclick="playAudio('Consequently, we are in the know about the upcoming merger.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈkɑːnsəkwentli... ɪn ðə noʊ/</span><br><span class="character-portuguese-phonetics">(CÓN-sẽ-cuênt-li... ên dhã NÔU)</span><span class="details-translation"><strong>Consequentemente</strong>, nós <strong>estamos informados / a par (in the know)</strong> sobre a futura fusão.</span></td>
+                    </tr>
+                    <tr>
+                        <td>She <span class="example-word">made it known</span> that she was unhappy with the results. <button class="audio-btn-inline" onclick="playAudio('She made it known that she was unhappy with the results.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/meɪd ɪt noʊn/</span><br><span class="character-portuguese-phonetics">(MÊID êt NÔUN)</span><span class="details-translation">Ela <strong>deixou claro / tornou público</strong> que ela estava infeliz com os resultados.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Even if</span> he <span class="example-word">knew</span> the answer, he wouldn't tell us. <button class="audio-btn-inline" onclick="playAudio('Even if he knew the answer, he wouldn\'t tell us.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈiːvən ɪf hiː nuː/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn êf ríi NÚU)</span><span class="details-translation"><strong>Mesmo se</strong> ele <strong>soubesse</strong> a resposta, ele não nos contaria. (2nd Conditional).</span></td>
+                    </tr>
+                    <tr>
+                        <td>I <span class="example-word">don't know of</span> any restaurants open at this hour. <button class="audio-btn-inline" onclick="playAudio('I don\'t know of any restaurants open at this hour.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/doʊnt noʊ əv/</span><br><span class="character-portuguese-phonetics">(dôunt NÔU ãv)</span><span class="details-translation">Eu <strong>desconheço a existência de (não sei de)</strong> nenhum restaurante aberto a essa hora.</span></td>
+                    </tr>
+                    <tr>
+                        <td>Not <span class="connective">that</span> I <span class="example-word">know of</span>. <button class="audio-btn-inline" onclick="playAudio('Not that I know of.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/nɑːt ðæt aɪ noʊ əv/</span><br><span class="character-portuguese-phonetics">(NÓT dhét ái NÔU ãv)</span><span class="details-translation">Não <strong>que</strong> eu <strong>saiba</strong>. (Resposta curta muito comum).</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= VERBO 10: SAY ================= -->
+        <h2>10. SAY (Dizer, Afirmar, Declarar...)</h2>
+        
+        <div class="nota-dica">
+            <h4>🚨 Não Confunda: SAY vs. TELL</h4>
+            <p><strong>TELL</strong> exige obrigatoriamente que você especifique *para quem* a mensagem é dita (Ex: Tell <em>me</em>, Tell <em>him</em>).<br>
+            <strong>SAY</strong> foca no conteúdo da mensagem, e não para quem foi dito. Se quiser usar uma pessoa com "Say", use a preposição "to" (Ex: He said <em>to me</em> that...).
+            </p>
+        </div>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="connective">Needless to say</span>, the project was a massive failure. <button class="audio-btn-inline" onclick="playAudio('Needless to say, the project was a massive failure.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈniːdləs tə seɪ/</span><br><span class="character-portuguese-phonetics">(NÍID-lês tã SÊI)</span><span class="details-translation"><strong>Desnecessário dizer (Obviamente)</strong>, o projeto foi uma falha massiva.</span></td>
+                    </tr>
+                    <tr>
+                        <td>She <span class="example-word">is said to be</span> the smartest person in the room. <button class="audio-btn-inline" onclick="playAudio('She is said to be the smartest person in the room.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz sed tə biː/</span><br><span class="character-portuguese-phonetics">(êz SÉD tã bíi)</span><span class="details-translation"><strong>Diz-se que ela é</strong> a pessoa mais inteligente da sala. (Voz passiva impessoal).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Although</span> they <span class="example-word">had said</span> everything was fine, the company went bankrupt. <button class="audio-btn-inline" onclick="playAudio('Although they had said everything was fine, the company went bankrupt.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... hæd sed/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... RED SÉD)</span><span class="details-translation"><strong>Embora</strong> eles <strong>tivessem dito</strong> que tudo estava bem, a empresa faliu. (Past Perfect).</span></td>
+                    </tr>
+                    <tr>
+                        <td>It <span class="example-word">goes without saying</span> that we value your contribution. <button class="audio-btn-inline" onclick="playAudio('It goes without saying that we value your contribution.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɡoʊz wɪˈðaʊt ˈseɪɪŋ/</span><br><span class="character-portuguese-phonetics">(gôuz uí-DHÁUT SÊI-in)</span><span class="details-translation"><strong>Não é preciso nem dizer (É óbvio)</strong> que nós valorizamos sua contribuição.</span></td>
+                    </tr>
+                    <tr>
+                        <td>I would <span class="example-word">say</span> you are absolutely right, <span class="connective">nevertheless</span> we must test it. <button class="audio-btn-inline" onclick="playAudio('I would say you are absolutely right, nevertheless we must test it.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wʊd seɪ... ˌnevərðəˈles/</span><br><span class="character-portuguese-phonetics">(uúd SÊI... né-vãr-dhã-LÉS)</span><span class="details-translation">Eu <strong>diria</strong> que você está absolutamente certo, <strong>mesmo assim</strong> devemos testar.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He walked away <span class="connective">without</span> <span class="example-word">saying</span> a word. <button class="audio-btn-inline" onclick="playAudio('He walked away without saying a word.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɪˈðaʊt ˈseɪɪŋ/</span><br><span class="character-portuguese-phonetics">(uí-DHÁUT SÊI-in)</span><span class="details-translation">Ele foi embora <strong>sem dizer</strong> uma palavra. (Preposição 'without' + Verbo-ing).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">As the saying goes</span>, don't judge a book by its cover. <button class="audio-btn-inline" onclick="playAudio('As the saying goes, don\'t judge a book by its cover.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/æz ðə ˈseɪɪŋ ɡoʊz/</span><br><span class="character-portuguese-phonetics">(éz dhã SÊI-in gôuz)</span><span class="details-translation"><strong>Como diz o ditado (provérbio)</strong>, não julgue um livro pela capa.</span></td>
+                    </tr>
+                    <tr>
+                        <td>That <span class="example-word">is to say</span>, the deadline has been moved up. <button class="audio-btn-inline" onclick="playAudio('That is to say, the deadline has been moved up.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðæt ɪz tə seɪ/</span><br><span class="character-portuguese-phonetics">(dhét êz tã SÊI)</span><span class="details-translation"><strong>Ou seja / Em outras palavras</strong>, o prazo foi antecipado.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He hasn't <span class="example-word">had a say</span> in this decision <span class="connective">yet</span>. <button class="audio-btn-inline" onclick="playAudio('He hasn\'t had a say in this decision yet.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hæznt hæd ə seɪ... jet/</span><br><span class="character-portuguese-phonetics">(RÉ-zãnt RED ã SÊI... iét)</span><span class="details-translation">Ele não <strong>teve voz / opinião (não pôde opinar)</strong> nesta decisão <strong>ainda</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td>I can't <span class="example-word">say for sure</span> <span class="connective">whether</span> it will rain or not. <button class="audio-btn-inline" onclick="playAudio('I can\'t say for sure whether it will rain or not.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/kænt seɪ fər ʃʊr ˈweðər/</span><br><span class="character-portuguese-phonetics">(ként SÊI for xúr UÉ-dhãr)</span><span class="details-translation">Eu não posso <strong>dizer com certeza</strong> <strong>se</strong> vai chover ou não.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">Unless</span> you <span class="example-word">say</span> otherwise, we will proceed as planned. <button class="audio-btn-inline" onclick="playAudio('Unless you say otherwise, we will proceed as planned.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ənˈles juː seɪ ˈʌðərwaɪz/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS iúu SÊI Â-dhãr-uáiz)</span><span class="details-translation"><strong>A menos que</strong> você <strong>diga</strong> o contrário, seguiremos como planejado.</span></td>
+                    </tr>
+                    <tr>
+                        <td>She <span class="example-word">said to herself</span> that she would never give up. <button class="audio-btn-inline" onclick="playAudio('She said to herself that she would never give up.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/sed tə hərˈself/</span><br><span class="character-portuguese-phonetics">(SÉD tã rãr-SÉLF)</span><span class="details-translation">Ela <strong>disse para si mesma</strong> que nunca iria desistir.</span></td>
+                    </tr>
+                    <tr>
+                        <td>What you are <span class="example-word">saying</span> contradicts the facts; <span class="connective">therefore</span>, we need proof. <button class="audio-btn-inline" onclick="playAudio('What you are saying contradicts the facts; therefore, we need proof.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wʌt juː ɑːr ˈseɪɪŋ... ˈðerfɔːr/</span><br><span class="character-portuguese-phonetics">(uót iúu ár SÊI-in... DHÉR-for)</span><span class="details-translation">O que você está <strong>dizendo</strong> contradiz os fatos; <strong>portanto</strong>, precisamos de provas.</span></td>
+                    </tr>
+                    <tr>
+                        <td>He <span class="example-word">would have said</span> something, <span class="connective">had he been given</span> the chance. <button class="audio-btn-inline" onclick="playAudio('He would have said something, had he been given the chance.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wʊd həv sed... hæd hiː bɪn ˈɡɪvən/</span><br><span class="character-portuguese-phonetics">(uúd ræv SÉD... réd ríi bên GÊ-vãn)</span><span class="details-translation">Ele <strong>teria dito</strong> algo, <strong>tivesse sido dada a ele (se lhe dessem)</strong> a chance. (Condicional Invertida Passiva).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="connective">To say the least</span>, the meal was disappointing. <button class="audio-btn-inline" onclick="playAudio('To say the least, the meal was disappointing.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/tə seɪ ðə liːst/</span><br><span class="character-portuguese-phonetics">(tã SÊI dhã LÍIST)</span><span class="details-translation"><strong>Para dizer o mínimo</strong>, a refeição foi decepcionante.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= QUIZ INTERATIVO PARTE 2 ================= -->
+        <section id="quiz-interativo">
+            <h2>Quiz Interativo Final - Parte 2 🧠</h2>
+            <p>Teste as nuances de GO, COME, SEE, KNOW e SAY. Clique na opção para ver o resultado na hora!</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>1.</strong> Ao atender ao telefone, sua mãe pede para você ir até a cozinha onde ela está. Qual é a forma correta que um nativo diria "Estou indo!"?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">a) I am going!</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q1')">b) I am coming!</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">c) I am seeing!</button>
+                    <div id="feedback-q1" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>2.</strong> Complete corretamente: "I want to _______ your brother. I've heard a lot about him, but we've never spoken." (Conhecer pela primeira vez)</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q2')">a) know</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q2')">b) meet</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q2')">c) see</button>
+                    <div id="feedback-q2" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>3.</strong> Traduza o phrasal verb nesta frase: "I didn't expect the alarm to <strong>go off</strong>."</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q3')">a) O alarme ser desligado.</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q3')">b) O alarme disparar.</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q3')">c) O alarme ir embora.</button>
+                    <div id="feedback-q3" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>4.</strong> "He _______ me that the project was cancelled." Qual verbo preenche a lacuna corretamente considerando que há a pessoa (me) especificada após o verbo?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q4')">a) said</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q4')">b) spoke</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q4')">c) told</button>
+                    <div id="feedback-q4" class="quiz-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusao" style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+            <h3>Fim da Parte 2 🥳</h3>
+            <p>Magnífico! Você acaba de devorar 75 frases avançadas utilizando os verbos mais enganosos da língua inglesa.</p>
+            <p>O domínio das locuções como <em>"goes without saying"</em>, <em>"come up with"</em> e <em>"see eye to eye"</em> fará seu inglês soar incrivelmente natural.</p>
+        </section>
+        
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu</button>
+    </div>
+
+    <!-- SCRIPT DE ÁUDIO E QUIZ -->
+    <script>
+        // SCRIPT DO ÁUDIO
+        let voices = [];
+        function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+        loadVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) { window.speechSynthesis.onvoiceschanged = loadVoices; }
+
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 0.85; 
+                utterance.pitch = 1;
+
+                if (voices.length === 0) loadVoices();
+                let targetVoice = voices.find(voice => 
+                    (voice.name.includes('Google') || voice.name.includes('Premium') || voice.name.includes('Samantha')) 
+                    && voice.lang.includes('en-US')
+                );
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang === 'en-US');
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang.startsWith('en'));
+
+                if (targetVoice) { utterance.voice = targetVoice; utterance.lang = targetVoice.lang; } 
+                else { utterance.lang = 'en-US'; }
+                window.speechSynthesis.speak(utterance);
+            } else { alert("Desculpe, seu navegador não suporta reprodução de áudio."); }
+        }
+
+        // SCRIPT DO QUIZ
+        function checkAnswer(button, isCorrect, questionId) {
+            const questionDiv = button.parentElement;
+            const buttons = questionDiv.querySelectorAll('.quiz-btn');
+            buttons.forEach(btn => btn.disabled = true); 
+            
+            if (isCorrect) {
+                button.classList.add('correct');
+            } else {
+                button.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.style.border = '2px solid #28a745';
+                        btn.style.color = '#28a745';
+                        btn.style.fontWeight = 'bold';
+                    }
+                });
+            }
+
+            const feedbackDiv = document.getElementById('feedback-' + questionId);
+            feedbackDiv.style.display = 'block';
+            if (isCorrect) {
+                feedbackDiv.innerHTML = "✅ Excelente! Acertou em cheio.";
+                feedbackDiv.style.color = "#28a745";
+            } else {
+                feedbackDiv.innerHTML = "❌ Incorreto. Fique atento às dicas dadas no texto!";
+                feedbackDiv.style.color = "#dc3545";
+            }
+        }
+    </script>
+</body>
+</html>
