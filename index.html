@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Aula Extra 1: Mega Guia de Verbos Confusos e Estruturas Avançadas (Parte 2)</title>
+    <title>Aula Extra 1.2 – Verbos Mais Usados: Dominando o Verbo TAKE</title>
     
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1050px;
             margin: 0 auto;
             background: #fff;
             padding: 30px;
@@ -36,30 +36,39 @@
         h1 {
             color: #2c3e50;
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #9b59b6;
+            border-bottom: 3px solid #2980b9;
             line-height: 1.3;
         }
         
         h2 { 
-            color: #2c3e50; 
-            margin-top: 40px; 
+            color: #1f618d; 
+            margin-top: 35px; 
             margin-bottom: 15px; 
-            font-size: 1.6rem; 
-            border-bottom: 2px solid #eee; 
-            padding-bottom: 5px; 
+            font-size: 1.45rem; 
+            border-bottom: 2px solid #eaf2f8; 
+            padding-bottom: 8px;
             page-break-after: avoid;
         }
-        
-        p, li { font-size: 1rem; margin-bottom: 12px; color: #444; }
-        
-        .emoji-large { font-size: 1.5rem; }
-        .emoji-small { font-size: 1.2rem; }
 
-        /* --- DESTAQUES E CAIXAS --- */
-        .theme-intro, .nota-dica {
+        h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 4px solid #2980b9;
+            padding-left: 10px;
+        }
+        
+        p, li { font-size: 1rem; margin-bottom: 10px; color: #444; }
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        
+        .emoji-large { font-size: 1.4rem; }
+
+        /* --- CAIXAS DE DESTAQUE E EXPLICAÇÃO --- */
+        .theme-intro, .nota-gramatical, .nota-dica, .spoken-box {
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
@@ -67,78 +76,61 @@
             page-break-inside: avoid;
         }
 
-        .theme-intro { background-color: #f4ecf7; border-left-color: #9b59b6; }
-        .nota-dica { background-color: #fff3cd; border-left-color: #ffc107; color: #856404; }
-        .nota-dica h4 { margin-bottom: 8px; color: #856404; }
+        .theme-intro { background-color: #ebf5fb; border-left-color: #2980b9; }
+        .spoken-box { background-color: #fef9e7; border-left-color: #f39c12; }
+        .nota-gramatical { background-color: #f5eef8; border-left-color: #8e44ad; }
+        .nota-dica { background-color: #e8f8f5; border-left-color: #16a085; }
 
-        .example-word { color: #8e44ad; font-weight: 700; text-decoration: underline; }
-        .connective { color: #d35400; font-weight: bold; background-color: #fbeee6; padding: 0 4px; border-radius: 4px; }
-        
-        /* --- ESTILOS DE IPA E PRONÚNCIA --- */
-        .ipa-symbol {
-            font-family: 'Roboto Mono', monospace;
-            background-color: #f1f1f1;
-            padding: 3px 6px;
-            border-radius: 4px;
-            color: #e74c3c;
-            font-size: 0.9em;
-            display: inline-block;
-            margin-bottom: 4px;
+        /* --- GRID DE CENAS E PARTÍCULAS --- */
+        .meanings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+            gap: 12px;
+            margin: 15px 0 25px 0;
         }
-        
-        .character-portuguese-phonetics {
-            display: block;
-            color: #27ae60;
-            font-style: italic;
-            font-size: 0.85em;
-            margin-bottom: 6px;
-        }
-
-        /* --- TABELAS --- */
-        .table-responsive-wrapper {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin-bottom: 30px;
-            border-radius: 8px;
+        .meaning-card {
+            background: #fff;
             border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border-top: 4px solid #2980b9;
+            border-radius: 8px;
+            padding: 12px 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            page-break-inside: avoid;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px;
+        .meaning-card.phrasal {
+            border-top-color: #8e44ad;
         }
-
-        th {
-            background-color: #34495e;
-            color: white;
-            padding: 12px 15px;
+        .meaning-card h4 {
+            color: #1f618d;
             font-size: 0.95rem;
-            text-align: left;
-            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .meaning-card.phrasal h4 {
+            color: #6c3483;
+        }
+        .meaning-card p {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+            color: #555;
         }
 
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            vertical-align: top;
+        /* --- BARRA DE BUSCA --- */
+        .search-box { margin: 20px 0; }
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid #dcdde1;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #2980b9;
         }
 
-        tr:nth-child(even) { background-color: #fafafa; }
-        tr:hover { background-color: #f1f5f9; }
-
-        .details-translation {
-            display: block;
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px dashed #ddd;
-            color: #333;
-            font-weight: 500;
-        }
-
-        /* --- BOTÕES --- */
+        /* --- BOTÕES DE NAVEGAÇÃO E ÁUDIO --- */
         .nav-btn {
             display: block;
             width: 100%;
@@ -153,541 +145,705 @@
             font-size: 1rem;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        
-        .audio-btn-inline {
-            background: none;
-            border: none;
+        .nav-btn:hover { background-color: #2c3e50; }
+
+        .audio-btn-word {
+            background-color: #ebf5fb;
+            border: 1px solid #85c1e9;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 0.9rem;
+            padding: 2px 7px;
+            margin-left: 6px;
+            vertical-align: middle;
+            transition: all 0.15s;
+        }
+        .audio-btn-word:hover { background-color: #2980b9; color: #fff; }
+
+        .audio-btn-inline {
+            background: #eef6fc;
+            border: 1px solid #cce3f6;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             vertical-align: middle;
             margin-left: 8px;
-            padding: 5px;
-            transition: transform 0.1s;
+            transition: transform 0.1s, background-color 0.2s;
         }
+        .audio-btn-inline:hover { background: #2980b9; color: #fff; }
         .audio-btn-inline:active { transform: scale(0.9); }
+
+        /* --- TABELAS --- */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 28px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 14px;
+            font-size: 0.9rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 13px 14px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            font-size: 0.95rem;
+        }
+
+        tr:nth-child(even) { background-color: #fafafa; }
+        tr:hover { background-color: #f0f8ff; }
+
+        .num-badge {
+            display: inline-block;
+            background: #2980b9;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 2px 7px;
+            border-radius: 12px;
+            margin-right: 6px;
+        }
+
+        .sentence-en {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.02rem;
+        }
+
+        .sentence-en b {
+            color: #1f618d;
+            background-color: #ebf5fb;
+            padding: 1px 4px;
+            border-radius: 4px;
+            text-decoration: underline;
+        }
+
+        .ipa-symbol {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #c0392b;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .character-portuguese-phonetics {
+            display: block;
+            color: #27ae60;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.88rem;
+            margin-bottom: 4px;
+        }
+
+        .details-translation {
+            display: block;
+            color: #222;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .simple-explanation {
+            display: block;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #dcdde1;
+            color: #576574;
+            font-size: 0.85rem;
+        }
+
+        .simple-explanation strong { color: #1f618d; }
 
         /* --- QUIZ INTERATIVO --- */
         .quiz-container {
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 20px;
             margin-top: 15px;
             page-break-inside: avoid;
         }
         .quiz-question { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .quiz-question:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
         .quiz-btn {
             display: block;
             width: 100%;
             text-align: left;
-            padding: 12px 15px;
-            margin: 8px 0;
+            padding: 11px 15px;
+            margin: 7px 0;
             border: 2px solid #e0e0e0;
             background-color: #f9f9f9;
             border-radius: 6px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
         }
-        .quiz-btn:hover:not(:disabled) { border-color: #3498db; background-color: #f0f8ff; }
+        .quiz-btn:hover:not(:disabled) { border-color: #2980b9; background-color: #ebf5fb; }
         .quiz-btn.correct { background-color: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
         .quiz-btn.incorrect { background-color: #f8d7da; border-color: #dc3545; color: #721c24; }
-        .quiz-feedback { margin-top: 10px; font-size: 0.9rem; font-weight: bold; display: none; }
+        .quiz-feedback { margin-top: 8px; font-size: 0.9rem; font-weight: bold; display: none; }
 
-        /* --- IMPRESSÃO A4 --- */
+        /* --- RESPONSIVIDADE MOBILE --- */
+        @media (max-width: 700px) {
+            .container { padding: 15px; }
+            h1 { font-size: 1.45rem; }
+            table { min-width: 100%; }
+            .sentence-table thead { display: none; }
+            .sentence-table tr {
+                display: block;
+                border-bottom: 2px solid #e0e0e0;
+                padding: 10px 0;
+            }
+            .sentence-table td {
+                display: block;
+                width: 100%;
+                border: none;
+                padding: 6px 12px;
+            }
+        }
+
+        /* --- IMPRESSÃO A4 EM PDF --- */
         @media print {
-            body { background-color: #fff; padding: 0; }
+            body { background-color: #fff; padding: 0; font-size: 10pt; }
             .container { box-shadow: none; max-width: 100%; padding: 0; }
-            .nav-btn, .audio-btn-inline { display: none !important; }
-            table, tr, .nota-dica, .theme-intro { page-break-inside: avoid; }
-            th { background-color: #ddd !important; color: #000 !important; }
+            .nav-btn, .audio-btn-inline, .audio-btn-word, .search-box { display: none !important; }
+            tr, .nota-gramatical, .nota-dica, .spoken-box, .meaning-card { page-break-inside: avoid; }
             * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu</button>
-        
-        <h1>Aula Extra 1: Mega Guia de Verbos Confusos (Parte 2) <span class="emoji-large">🚀🧠</span><br>
-            <span style="font-size: 0.7em; font-weight: normal; color: #555;">(The Ultimate Guide to Tricky Verbs - Intermediário a Avançado)</span>
-        </h1>
-        
+        <!-- BOTÃO VOLTAR AO MENU PRINCIPAL (TOPO) -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+
+        <h1>Aula Extra 1.2 – Verbos Mais Usados:<br>Dominando o Verbo "TAKE" (Cenas, Blocos e Phrasal Verbs) <span class="emoji-large">🎬🧠✈️</span></h1>
+
+        <!-- SEÇÃO FALADA 1: A GRANDE VIRADA DE CHAVE -->
         <div class="theme-intro">
-            <p><strong>Bem-vindo(a) à Parte 2 da nossa imersão!</strong> <span class="emoji-small">📖</span></p>
-            <p>Se você dominou Get, Take, Make, Do e Have, agora é a vez dos gigantes da comunicação e movimento: <strong>GO, COME, SEE, KNOW e SAY</strong>. Vamos explorar como eles funcionam no passado perfeito, na voz passiva, condicionais e expressões avançadas muito usadas por nativos.</p>
-            <p><strong>Legenda de cores:</strong> Conectivos estão em <span class="connective">laranja</span> e os verbos em foco em <span class="example-word">roxo</span>.</p>
+            <p><strong>Por que uma palavra de apenas 4 letras causa tanta confusão?</strong></p>
+            <p>No começo, você aprende que <strong>TAKE</strong> significa "pegar". Beleza! Até aparecerem expressões como <em>take a shower</em> ("pegar um banho"? Não!), <em>take your time</em> ("pegue o seu tempo"? Também não!), <em>it takes 10 minutes</em> ("isso pega 10 minutos"? Socorro!) ou <em>don't take it personally</em>.</p>
+            <p>É aí que bate aquele desespero: <em>"Meu Deus, por que uma palavra tão simples significa tanta coisa?!"</em>. Mas hoje você vai ter uma <strong>virada de chave</strong> que vai mudar completamente a maneira como você aprende inglês: <strong>O inglês fica muito mais fácil quando você para de tentar traduzir cada palavra isoladamente e passa a enxergar a CENA e o BLOCO!</strong></p>
         </div>
-        
-        <!-- ================= VERBO 6: GO ================= -->
-        <h2>6. GO (Ir, Partir, Tornar-se, Funcionar...)</h2>
-        
-        <div class="nota-dica">
-            <h4>🚨 Não Confunda: GO vs. COME</h4>
+
+        <div class="spoken-box">
+            <h3>🇧🇷 A Comparação com o Português: O Caos de "TOMAR" e "PEGAR"</h3>
+            <p>Dizer que <strong>TAKE = pegar</strong> é exatamente como dizer para um estrangeiro aprendendo português que <strong>TOMAR = drink (beber)</strong>. Se ele decorar apenas isso, como você explica para ele:</p>
             <ul>
-                <li><strong>Direção:</strong> "Go" afasta do falante (Ir). "Come" aproxima (Vir). (Ex: <em>I am going to you</em> = Eu estou indo até você. - Nativos dizem <em>I am coming to you</em>, porque o ponto de referência é o destino).</li>
-                <li><strong>Mudança Negativa:</strong> Em inglês falado, "Go" + Adjetivo frequentemente indica mudança para pior. (Ex: Go bad = estragar; Go crazy = enlouquecer; Go blind = ficar cego).</li>
-                <li><strong>Gone vs Been:</strong> "He has gone to London" (Ele foi e ainda está lá). "He has been to London" (Ele foi e já voltou).</li>
+                <li><em>Tomar banho, tomar cuidado, tomar uma decisão, tomar um susto, tomar remédio, tomar uma atitude, tomar partido, tomar conta de algo?</em> Ele olharia assustado e diria: "Pera aí, você não falou que tomar significa beber?!"</li>
+                <li>O mesmo acontece com o nosso verbo <strong>PEGAR</strong>: em português, você <em>pega o ônibus, pega sono, pega leve, pega pesado, pega alguém mentindo, a madeira pega fogo, a comida pega gosto, uma piada pega mal!</em> Imagine um americano tentando traduzir "pegar" por uma única palavra em inglês. Boa sorte para ele!</li>
             </ul>
+            <p><strong>A Moral da História:</strong> É injusto com o seu cérebro exigir que <em>TAKE</em> caiba dentro de uma única palavra em português. Em vez de perguntar <em>"Qual é a tradução de take?"</em>, a pergunta inteligente é: <strong>"Que CENA está acontecendo nessa situação?"</strong></p>
         </div>
 
+        <!-- UM DIA INTEIRO USANDO APENAS TAKE -->
+        <h2>1. O Poder de Simplificação: Um Dia Inteiro Usando "TAKE"</h2>
+        <p>Veja que maravilha: enquanto em português precisamos de <strong>8 verbos diferentes</strong> (levar, pegar, dar, fazer, demorar, querer, seguir, cuidar), o inglês resolve o seu dia inteiro usando a mesma palavra de 4 letras. <strong>O "take" não complica o inglês; ele simplifica a sua vida!</strong></p>
+        <ul>
+            <li>Saindo de casa com chuva: <strong>I'm taking my umbrella.</strong> (Estou <em>levando</em> meu guarda-chuva).</li>
+            <li>Indo para o trabalho: <strong>I'm taking the bus.</strong> (Estou <em>pegando</em> o ônibus / Vou de ônibus).</li>
+            <li>Chegando no escritório, um colega mostra um papel: <strong>Take a look at this.</strong> (<em>Dá</em> uma olhada nisso).</li>
+            <li>Depois de duas horas trabalhando: <strong>I need to take a break.</strong> (Preciso <em>fazer</em> uma pausa).</li>
+            <li>Alguém pergunta quanto tempo leva o relatório: <strong>It takes about 20 minutes.</strong> (<em>Demora</em> uns 20 minutos).</li>
+            <li>Na hora do almoço no restaurante: <strong>I'll take the chicken.</strong> (Vou <em>querer/escolher</em> o frango).</li>
+            <li>Um amigo te aconselha na mesa: <strong>Take my advice.</strong> (<em>Siga/Aceite</em> o meu conselho).</li>
+            <li>Na hora de ir embora, o chefe se despede: <strong>Take care!</strong> (<em>Se cuida!</em>)</li>
+        </ul>
+
+        <!-- TABELA DE CONJUGAÇÃO DO VERBO TAKE -->
+        <h2>2. Mapa das Conjugações de "TAKE"</h2>
         <div class="table-responsive-wrapper">
             <table>
                 <thead>
-                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
+                    <tr>
+                        <th>Tempo / Forma</th>
+                        <th>Sujeito</th>
+                        <th>Variação (Áudio)</th>
+                        <th>Pronúncia</th>
+                        <th>Exemplo Rápido</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><span class="connective">By the time</span> we arrived, she <span class="example-word">had</span> already <span class="example-word">gone</span>. <button class="audio-btn-inline" onclick="playAudio('By the time we arrived, she had already gone.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/baɪ ðə taɪm... hæd ˈɔːlredi ɡɔːn/</span><br><span class="character-portuguese-phonetics">(bái dhã TÁIM... réd ól-RÉ-di GÓN)</span><span class="details-translation"><strong>Quando</strong> chegamos, ela já <strong>tinha ido embora</strong>. (Past Perfect)</span></td>
+                        <td><strong>Presente Simples (Base / Plural)</strong></td>
+                        <td>I, You, We, They</td>
+                        <td><strong>take</strong> <button class="audio-btn-word" onclick="playAudio('take')">🔊</button></td>
+                        <td><code>/teɪk/</code> <em>(têic)</em></td>
+                        <td>I take the bus. / They take notes.</td>
                     </tr>
                     <tr>
-                        <td><span class="connective">Even though</span> it is late, the show must <span class="example-word">go on</span>. <button class="audio-btn-inline" onclick="playAudio('Even though it is late, the show must go on.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈiːvən ðoʊ... ɡoʊ ɑːn/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn dhôu... GÔU ÓN)</span><span class="details-translation"><strong>Embora</strong> seja tarde, o show deve <strong>continuar</strong>. (Phrasal verb: go on)</span></td>
+                        <td><strong>Presente Simples (3ª Pessoa)</strong></td>
+                        <td>He, She, It</td>
+                        <td><strong>takes</strong> <button class="audio-btn-word" onclick="playAudio('takes')">🔊</button></td>
+                        <td><code>/teɪks/</code> <em>(têics)</em></td>
+                        <td>It takes time. / She takes after her mom.</td>
                     </tr>
                     <tr>
-                        <td>If he had the money, he <span class="example-word">would go</span> to Japan <span class="connective">immediately</span>. <button class="audio-btn-inline" onclick="playAudio('If he had the money, he would go to Japan immediately.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wʊd ɡoʊ... ɪˈmiːdiətli/</span><br><span class="character-portuguese-phonetics">(uúd GÔU... i-MÍI-diãt-li)</span><span class="details-translation">Se ele tivesse o dinheiro, ele <strong>iria</strong> ao Japão <strong>imediatamente</strong>. (2nd Conditional)</span></td>
+                        <td><strong>Passado Simples (V2)</strong></td>
+                        <td>Todos os sujeitos</td>
+                        <td><strong>took</strong> <button class="audio-btn-word" onclick="playAudio('took')">🔊</button></td>
+                        <td><code>/tʊk/</code> <em>(túk)</em></td>
+                        <td>The plane took off. (Com <em>didn't/did</em> volta para <strong>take</strong>).</td>
                     </tr>
                     <tr>
-                        <td>The milk <span class="example-word">went bad</span> <span class="connective">because</span> you left it outside the fridge. <button class="audio-btn-inline" onclick="playAudio('The milk went bad because you left it outside the fridge.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/went bæd bɪˈkəz/</span><br><span class="character-portuguese-phonetics">(uént BÉD bi-CÂZ)</span><span class="details-translation">O leite <strong>estragou (ficou ruim)</strong> <strong>porque</strong> você o deixou fora da geladeira.</span></td>
+                        <td><strong>Particípio Passado (V3)</strong></td>
+                        <td>Após have / has / had / be</td>
+                        <td><strong>taken</strong> <button class="audio-btn-word" onclick="playAudio('taken')">🔊</button></td>
+                        <td><code>/ˈteɪkən/</code> <em>(têi-cãn)</em></td>
+                        <td>The company was taken over.</td>
                     </tr>
                     <tr>
-                        <td><span class="connective">Furthermore</span>, we need to <span class="example-word">go over</span> the report again. <button class="audio-btn-inline" onclick="playAudio('Furthermore, we need to go over the report again.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈfɜːrðərmɔːr... ɡoʊ ˈoʊvər/</span><br><span class="character-portuguese-phonetics">(FÃR-dhãr-mor... GÔU ÔU-vãr)</span><span class="details-translation"><strong>Além disso</strong>, precisamos <strong>revisar / passar a limpo</strong> o relatório novamente.</span></td>
+                        <td><strong>Contínuo / Gerúndio (-ING)</strong></td>
+                        <td>Após am / is / are / was / were</td>
+                        <td><strong>taking</strong> <button class="audio-btn-word" onclick="playAudio('taking')">🔊</button></td>
+                        <td><code>/ˈteɪkɪŋ/</code> <em>(têi-quin)</em></td>
+                        <td>I'm taking my laptop with me. (Perde o 'e' final).</td>
                     </tr>
                     <tr>
-                        <td><span class="connective">Unless</span> the pain <span class="example-word">goes away</span>, you should see a doctor. <button class="audio-btn-inline" onclick="playAudio('Unless the pain goes away, you should see a doctor.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ənˈles... ɡoʊz əˈweɪ/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS... GÔUZ ã-UÊI)</span><span class="details-translation"><strong>A menos que</strong> a dor <strong>passe / vá embora</strong>, você deveria consultar um médico.</span></td>
-                    </tr>
-                    <tr>
-                        <td>The bomb <span class="example-word">went off</span> <span class="connective">while</span> people were sleeping. <button class="audio-btn-inline" onclick="playAudio('The bomb went off while people were sleeping.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/went ɔːf waɪl/</span><br><span class="character-portuguese-phonetics">(uént ÓF uáil)</span><span class="details-translation">A bomba <strong>explodiu (disparou)</strong> <strong>enquanto</strong> as pessoas estavam dormindo. (Go off = disparar alarme, explodir).</span></td>
-                    </tr>
-                    <tr>
-                        <td>She <span class="example-word">will have gone</span> through the entire training <span class="connective">by</span> next month. <button class="audio-btn-inline" onclick="playAudio('She will have gone through the entire training by next month.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wɪl həv ɡɔːn θruː... baɪ/</span><br><span class="character-portuguese-phonetics">(uêl ræv GÓN THRÚU... bái)</span><span class="details-translation">Ela <strong>terá passado por (concluído)</strong> todo o treinamento <strong>até</strong> o mês que vem. (Future Perfect)</span></td>
-                    </tr>
-                    <tr>
-                        <td>He <span class="example-word">has been going through</span> a tough time <span class="connective">lately</span>. <button class="audio-btn-inline" onclick="playAudio('He has been going through a tough time lately.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæz bɪn ˈɡoʊɪŋ θruː... ˈleɪtli/</span><br><span class="character-portuguese-phonetics">(réz bên GÔU-in THRÚU... LÊIT-li)</span><span class="details-translation">Ele <strong>tem passado por</strong> um momento difícil <strong>ultimamente</strong>. (Present Perfect Continuous)</span></td>
-                    </tr>
-                    <tr>
-                        <td>I really wish I <span class="example-word">could go</span> back in time <span class="connective">to fix</span> things. <button class="audio-btn-inline" onclick="playAudio('I really wish I could go back in time to fix things.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wɪʃ aɪ kʊd ɡoʊ bæk/</span><br><span class="character-portuguese-phonetics">(UÊSH ái cúd GÔU BÉK)</span><span class="details-translation">Eu realmente queria que eu <strong>pudesse voltar</strong> no tempo <strong>para consertar</strong> as coisas.</span></td>
-                    </tr>
-                    <tr>
-                        <td>They <span class="example-word">are going</span> crazy <span class="connective">because of</span> the endless noise. <button class="audio-btn-inline" onclick="playAudio('They are going crazy because of the endless noise.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɑːr ˈɡoʊɪŋ ˈkreɪzi bɪˈkəz əv/</span><br><span class="character-portuguese-phonetics">(ár GÔU-in CRÊI-zi bi-CÂZ ãv)</span><span class="details-translation">Eles <strong>estão ficando</strong> loucos <strong>por causa do</strong> barulho sem fim. (Mudança de estado).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Provided that</span> everything <span class="example-word">goes</span> well, we will sign the contract. <button class="audio-btn-inline" onclick="playAudio('Provided that everything goes well, we will sign the contract.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/prəˈvaɪdɪd ðæt... ɡoʊz wel/</span><br><span class="character-portuguese-phonetics">(prõ-VÁI-dêd dhét... GÔUZ uél)</span><span class="details-translation"><strong>Contanto que</strong> tudo <strong>corra/vá</strong> bem, nós assinaremos o contrato.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Therefore</span>, we must <span class="example-word">go ahead</span> with the new strategy. <button class="audio-btn-inline" onclick="playAudio('Therefore, we must go ahead with the new strategy.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈðerfɔːr... ɡoʊ əˈhed/</span><br><span class="character-portuguese-phonetics">(DHÉR-for... GÔU ã-RÉD)</span><span class="details-translation"><strong>Portanto</strong>, devemos <strong>prosseguir (ir em frente)</strong> com a nova estratégia.</span></td>
-                    </tr>
-                    <tr>
-                        <td>I usually <span class="example-word">go without</span> breakfast <span class="connective">when</span> I am in a hurry. <button class="audio-btn-inline" onclick="playAudio('I usually go without breakfast when I am in a hurry.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɡoʊ wɪˈðaʊt... wen/</span><br><span class="character-portuguese-phonetics">(GÔU uí-DHÁUT... uén)</span><span class="details-translation">Eu geralmente <strong>fico sem</strong> o café da manhã <strong>quando</strong> estou com pressa.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Regardless of</span> the risk, she decided to <span class="example-word">go for</span> it. <button class="audio-btn-inline" onclick="playAudio('Regardless of the risk, she decided to go for it.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/rɪˈɡɑːrdləs əv... ɡoʊ fɔːr ɪt/</span><br><span class="character-portuguese-phonetics">(ri-GÁRD-lês ãv... GÔU fór êt)</span><span class="details-translation"><strong>Independentemente do</strong> risco, ela decidiu <strong>tentar / se jogar (ir atrás)</strong>.</span></td>
+                        <td><strong>Futuro (Will / Going to)</strong></td>
+                        <td>Todos os sujeitos</td>
+                        <td><strong>will take / I'll take</strong> <button class="audio-btn-word" onclick="playAudio('I will take')">🔊</button></td>
+                        <td><em>(uíl têic / ail têic)</em></td>
+                        <td>I'll take a cappuccino. / I'm gonna take a break.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- ================= VERBO 7: COME ================= -->
-        <h2>7. COME (Vir, Chegar, Acontecer, Resultar...)</h2>
-        
-        <div class="nota-dica">
-            <h4>🚨 Phrasal Verbs Essenciais com COME</h4>
-            <ul>
-                <li><strong>Come up with:</strong> Inventar, ter uma ideia. (Ex: <em>He came up with a great plan</em>).</li>
-                <li><strong>Come across:</strong> Deparar-se por acaso, encontrar sem querer.</li>
-                <li><strong>Come down with:</strong> Ficar doente (Ex: <em>I came down with a cold</em> = Eu peguei um resfriado).</li>
-            </ul>
+        <!-- SEÇÃO 3: AS CENAS MENTAIS E ALERTAS IMPORTANTES -->
+        <h2>3. Enxergando as Cenas e os Blocos (Sem Decorar Regras!)</h2>
+        <div class="meanings-grid">
+            <div class="meaning-card">
+                <h4>1. Movimento: TAKE vs. BRING</h4>
+                <p><strong>Visualize a cena:</strong> Se o objeto sai daqui e vai com você para outro lugar, é <strong>TAKE</strong> (<em>Take the pen with you</em> = Leve com você). Se o objeto vem de lá chegando até mim, é <strong>BRING</strong> (<em>Bring the pen to me</em> = Traga para mim).</p>
+            </div>
+            <div class="meaning-card">
+                <h4>2. Alerta: Laptop vs. Notebook</h4>
+                <p>No Brasil chamamos computador portátil de "notebook", mas em inglês <strong>notebook</strong> é caderno de papel! Para o computador que você leva na viagem, diga: <em>I'm taking my <strong>laptop</strong> with me.</em></p>
+            </div>
+            <div class="meaning-card">
+                <h4>3. Transporte = TAKE</h4>
+                <p>Pessoa + Meio de Transporte + Destino = <strong>TAKE</strong>! <em>Take a taxi, take the train, take the bus, take the subway, take a flight.</em> Não traduza, apenas veja a cena de embarcar.</p>
+            </div>
+            <div class="meaning-card">
+                <h4>4. Aprenda em BLOCOS!</h4>
+                <p>Não desmonte <em>"Dar uma olhada"</em>. Aprenda o bloco inteiro como uma coisa só: <em>take a shower, take a break, take a nap, take a walk, take a look, take notes, take medicine.</em></p>
+            </div>
+            <div class="meaning-card">
+                <h4>5. Tirar Foto = TAKE A PICTURE</h4>
+                <p>Nunca diga <em>"make a picture"</em> (você não fabrica a foto com as mãos!). A cena de alguém te entregando o celular na viagem é sempre: <em>Can you <strong>take a picture</strong> (ou photo) of us?</em></p>
+            </div>
+            <div class="meaning-card">
+                <h4>6. Tempo Necessário = IT TAKES</h4>
+                <p>Para falar de quanto tempo algo exige ou demora: <em>It takes 10 minutes, How long does it take to get there?, Learning English takes time</em> (aprender inglês leva tempo!).</p>
+            </div>
+            <div class="meaning-card">
+                <h4>7. Escolhas e Aceitação</h4>
+                <p>Na cafeteria ou loja, quando você escolhe algo para vir com você: <em>I'll take a cappuccino, I'll take the black one, I'll take it!</em> Ou abstrato: <em>take my advice, take responsibility, take a risk.</em></p>
+            </div>
+            <div class="meaning-card">
+                <h4>8. Inglês de Relação Humana</h4>
+                <p>Expressões que dão naturalidade imediata: <em>Take your time</em> (sem pressa), <em>Take it easy</em> (relaxa / vai com calma), <em>Don't take it personally</em> (não leve pro pessoal), <em>Don't take this the wrong way</em> (não me entenda mal).</p>
+            </div>
         </div>
 
-        <div class="table-responsive-wrapper">
-            <table>
-                <thead>
-                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>He managed to <span class="example-word">come up with</span> a brilliant idea <span class="connective">despite</span> the pressure. <button class="audio-btn-inline" onclick="playAudio('He managed to come up with a brilliant idea despite the pressure.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/kʌm ʌp wɪθ... dɪˈspaɪt/</span><br><span class="character-portuguese-phonetics">(CÂM ÂP uêth... di-SPÁIT)</span><span class="details-translation">Ele conseguiu <strong>inventar (surgir com)</strong> uma ideia brilhante <strong>apesar da</strong> pressão.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">While</span> I was cleaning the attic, I <span class="example-word">came across</span> some old photos. <button class="audio-btn-inline" onclick="playAudio('While I was cleaning the attic, I came across some old photos.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/waɪl... keɪm əˈkrɔːs/</span><br><span class="character-portuguese-phonetics">(uáil... KÊIM ã-CRÓS)</span><span class="details-translation"><strong>Enquanto</strong> eu limpava o sótão, eu <strong>me deparei com / encontrei</strong> algumas fotos velhas.</span></td>
-                    </tr>
-                    <tr>
-                        <td>She <span class="example-word">has come</span> a long way <span class="connective">since</span> she started learning English. <button class="audio-btn-inline" onclick="playAudio('She has come a long way since she started learning English.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæz kʌm ə lɔːŋ weɪ sɪns/</span><br><span class="character-portuguese-phonetics">(réz CÂM ã LONG uêi SÊNS)</span><span class="details-translation">Ela <strong>progrediu muito (veio um longo caminho)</strong> <strong>desde que</strong> começou a aprender inglês.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Had they invited</span> me, I <span class="example-word">would have come</span> to the wedding. <button class="audio-btn-inline" onclick="playAudio('Had they invited me, I would have come to the wedding.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæd ðeɪ... wʊd həv kʌm/</span><br><span class="character-portuguese-phonetics">(réd dhêi... uúd ræv CÂM)</span><span class="details-translation"><strong>Tivessem eles me convidado (Se eles tivessem...)</strong>, eu <strong>teria vindo</strong> ao casamento.</span></td>
-                    </tr>
-                    <tr>
-                        <td>The true cost of the project only <span class="example-word">came to light</span> <span class="connective">after</span> the audit. <button class="audio-btn-inline" onclick="playAudio('The true cost of the project only came to light after the audit.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/keɪm tə laɪt ˈæftər/</span><br><span class="character-portuguese-phonetics">(KÊIM tã LÁIT ÉF-tãr)</span><span class="details-translation">O verdadeiro custo do projeto só <strong>veio à tona (foi revelado)</strong> <strong>depois</strong> da auditoria.</span></td>
-                    </tr>
-                    <tr>
-                        <td>I won't give up, <span class="example-word">come</span> what may. <button class="audio-btn-inline" onclick="playAudio('I won\'t give up, come what may.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/kʌm wʌt meɪ/</span><br><span class="character-portuguese-phonetics">(CÂM uót mêi)</span><span class="details-translation">Eu não vou desistir, <strong>haja o que houver (venha o que vier)</strong>. (Expressão)</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Unless</span> you <span class="example-word">come clean</span> about the mistake, you will be fired. <button class="audio-btn-inline" onclick="playAudio('Unless you come clean about the mistake, you will be fired.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ənˈles... kʌm kliːn/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS... CÂM CLÍIN)</span><span class="details-translation"><strong>A menos que</strong> você <strong>confesse (fale a verdade)</strong> sobre o erro, você será demitido.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Consequently</span>, their dream of expanding <span class="example-word">came true</span>. <button class="audio-btn-inline" onclick="playAudio('Consequently, their dream of expanding came true.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈkɑːnsəkwentli... keɪm truː/</span><br><span class="character-portuguese-phonetics">(CÓN-sẽ-cuênt-li... KÊIM TRÚU)</span><span class="details-translation"><strong>Consequentemente</strong>, o sonho deles de expandir <strong>se tornou realidade</strong>.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He <span class="example-word">came down with</span> a terrible flu <span class="connective">right before</span> the trip. <button class="audio-btn-inline" onclick="playAudio('He came down with a terrible flu right before the trip.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/keɪm daʊn wɪθ... raɪt bɪˈfɔːr/</span><br><span class="character-portuguese-phonetics">(KÊIM DÁUN uêth... ráit bi-FÓR)</span><span class="details-translation">Ele <strong>pegou / adoeceu de</strong> uma gripe terrível <strong>bem antes</strong> da viagem.</span></td>
-                    </tr>
-                    <tr>
-                        <td>When it <span class="example-word">comes to</span> making deals, she is the best. <button class="audio-btn-inline" onclick="playAudio('When it comes to making deals, she is the best.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wen ɪt kʌmz tuː/</span><br><span class="character-portuguese-phonetics">(uén êt CÂMZ túu)</span><span class="details-translation"><strong>Quando se trata de</strong> fazer acordos, ela é a melhor. (Expressão de transição).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Even if</span> he begs, she won't <span class="example-word">come back</span> to him. <button class="audio-btn-inline" onclick="playAudio('Even if he begs, she won\'t come back to him.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈiːvən ɪf... kʌm bæk/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn êf... CÂM BÉK)</span><span class="details-translation"><strong>Mesmo se</strong> ele implorar, ela não vai <strong>voltar</strong> para ele.</span></td>
-                    </tr>
-                    <tr>
-                        <td>Their argument eventually <span class="example-word">came to an end</span>. <button class="audio-btn-inline" onclick="playAudio('Their argument eventually came to an end.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɪˈventʃuəli keɪm tuː ən end/</span><br><span class="character-portuguese-phonetics">(i-VÉN-tchu-a-li KÊIM túu ãn ÉND)</span><span class="details-translation">A discussão deles finalmente <strong>chegou ao fim</strong>.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Although</span> they lost the first game, they <span class="example-word">came from behind</span> to win the championship. <button class="audio-btn-inline" onclick="playAudio('Although they lost the first game, they came from behind to win the championship.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... keɪm frəm bɪˈhaɪnd/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... KÊIM frãm bi-RÁIND)</span><span class="details-translation"><strong>Embora</strong> tenham perdido o primeiro jogo, eles <strong>viraram o jogo (vieram de trás)</strong> para vencer o campeonato.</span></td>
-                    </tr>
-                    <tr>
-                        <td>We thought the car was broken, but it <span class="example-word">came back to life</span>. <button class="audio-btn-inline" onclick="playAudio('We thought the car was broken, but it came back to life.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/keɪm bæk tə laɪf/</span><br><span class="character-portuguese-phonetics">(KÊIM BÉK tã LÁIF)</span><span class="details-translation">Nós achamos que o carro estava quebrado, mas ele <strong>voltou à vida (voltou a funcionar)</strong>.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Therefore</span>, I suggest we cross that bridge when we <span class="example-word">come to it</span>. <button class="audio-btn-inline" onclick="playAudio('Therefore, I suggest we cross that bridge when we come to it.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈðerfɔːr... kʌm tuː ɪt/</span><br><span class="character-portuguese-phonetics">(DHÉR-for... CÂM túu êt)</span><span class="details-translation"><strong>Portanto</strong>, sugiro que resolvamos esse problema quando <strong>chegarmos lá (expressão)</strong>.</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- SEÇÃO 4: O SEGREDO VISUAL DOS PHRASAL VERBS -->
+        <h2>4. O Segredo dos Phrasal Verbs com TAKE: Olhe para a Partícula!</h2>
+        <div class="nota-gramatical">
+            <p><strong>Você não é um robô para decorar 5.000 combinações!</strong> Quando aparece <em>take off, take out, take in, take over</em>, o erro do aluno é ficar obcecado com o <em>take</em>. Quem entrega a imagem e o sentido da cena é a palavrinha que vem depois (a partícula!). Veja as 9 imagens visuais:</p>
         </div>
 
-        <!-- ================= VERBO 8: SEE ================= -->
-        <h2>8. SEE (Ver, Entender, Descobrir, Encontrar-se com...)</h2>
-        
-        <div class="nota-dica">
-            <h4>🚨 Não Confunda: SEE vs. LOOK vs. WATCH</h4>
-            <ul>
-                <li><strong>SEE:</strong> Capacidade passiva de enxergar; perceber algo com os olhos. Também significa <em>entender</em> (Ex: "Oh, I see!" = "Ah, entendi!").</li>
-                <li><strong>LOOK:</strong> Olhar intencionalmente para algo estático. (Ex: Look at this picture).</li>
-                <li><strong>WATCH:</strong> Assistir ou observar algo em movimento ou por um período de tempo. (Ex: Watch TV, watch a game).</li>
-            </ul>
+        <div class="meanings-grid">
+            <div class="meaning-card phrasal">
+                <h4>TAKE OFF = Separação / Impulso</h4>
+                <p><strong>OFF</strong> traz a ideia de desgrudar de uma superfície ou ganhar impulso: o sapato sai do pé (<em>take your shoes off</em>), o avião sai do chão (<em>the plane took off</em>) e a carreira/negócio decola (<em>the business really took off</em> - pronuncie <em>"bíz-nes"</em>!).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE OUT = De Dentro para Fora</h4>
+                <p><strong>OUT</strong> desenha a saída de dentro de algo: tirar do bolso (<em>take your phone out</em>), levar o lixo pra fora (<em>take out the trash</em>), levar alguém para sair/jantar fora (<em>took her out for dinner</em>) ou comida pra viagem (<em>takeout</em>).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE IN = Entrada / Absorver</h4>
+                <p><strong>IN</strong> é o movimento para dentro: acolher um cão de rua para dentro da sua casa/vida (<em>took in a stray dog</em>) ou fazer uma informação entrar na cabeça e ser digerida/assimilada (<em>Give me a second to take this in</em>).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE BACK = Movimento de Volta</h4>
+                <p><strong>BACK</strong> faz algo retornar à origem: devolver uma camisa que não serviu ou livro à biblioteca (<em>take it back</em>), retirar uma palavra dura que saiu da sua boca (<em>I take it back!</em>) ou uma música que te faz voltar no tempo (<em>That song takes me back</em>).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE OVER = Passar o Controle</h4>
+                <p><strong>OVER</strong> mostra alguém assumindo o comando de algo em andamento: comprar uma empresa menor (<em>taken over by a competitor</em>), assumir o volante na estrada (<em>Can you take over?</em>) ou no trabalho (<em>I'll take over from here</em> = Deixa comigo daqui pra frente).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE UP = Preencher / Ocupar</h4>
+                <p><strong>UP</strong> preenche um espaço disponível: uma caixa que ocupa espaço (<em>takes up space</em>), reunião que ocupa a manhã (<em>took up my morning</em>), app que ocupa memória (<em>takes up storage</em>) ou um novo hobby que passa a ocupar sua vida (<em>took up running</em>).</p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE ON = Colocar Sobre Si / Enfrentar</h4>
+                <p><strong>ON</strong> é aceitar carregar um peso/papel ou encarar um oponente: assumir mais trabalho ou função (<em>take on more work / a new role</em>) ou enfrentar um desafio/adversário (<em>take on the challenge / take on Brazil</em>).<br><em>Dica: Take over assume o controle; Take on assume a carga/desafio!</em></p>
+            </div>
+            <div class="meaning-card phrasal">
+                <h4>TAKE AFTER & TAKE TO</h4>
+                <p><strong>AFTER</strong> (vir depois na linha da família e herdar o jeito): <em>I take after my mother</em> (Puxei à minha mãe).<br><strong>TO</strong> (aproximação/afinidade): criar simpatia imediata (<em>I took to her immediately</em>) ou pegar gosto rápido (<em>She took to English quickly</em>).</p>
+            </div>
         </div>
 
-        <div class="table-responsive-wrapper">
-            <table>
-                <thead>
-                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="connective">Seeing that</span> you are busy, I will come back later. <button class="audio-btn-inline" onclick="playAudio('Seeing that you are busy, I will come back later.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈsiːɪŋ ðæt/</span><br><span class="character-portuguese-phonetics">(SÍI-in dhét)</span><span class="details-translation"><strong>Visto que (Já que)</strong> você está ocupado, eu voltarei mais tarde.</span></td>
-                    </tr>
-                    <tr>
-                        <td>We rarely <span class="example-word">see eye to eye</span> on political issues. <button class="audio-btn-inline" onclick="playAudio('We rarely see eye to eye on political issues.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/siː aɪ tuː aɪ/</span><br><span class="character-portuguese-phonetics">(SÍI ái túu ái)</span><span class="details-translation">Nós raramente <strong>concordamos (vemos olho no olho)</strong> em questões políticas.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">By the time</span> she realized the scam, she <span class="example-word">had</span> already <span class="example-word">seen</span> her money disappear. <button class="audio-btn-inline" onclick="playAudio('By the time she realized the scam, she had already seen her money disappear.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/baɪ ðə taɪm... hæd ˈɔːlredi siːn/</span><br><span class="character-portuguese-phonetics">(bái dhã TÁIM... réd ól-RÉ-di SÍIN)</span><span class="details-translation"><strong>Quando</strong> ela percebeu o golpe, ela já <strong>tinha visto</strong> seu dinheiro desaparecer. (Past Perfect)</span></td>
-                    </tr>
-                    <tr>
-                        <td>I can't <span class="example-word">see myself</span> living in another country <span class="connective">even if</span> I had the chance. <button class="audio-btn-inline" onclick="playAudio('I can\'t see myself living in another country even if I had the chance.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/kænt siː maɪˈself... ˈiːvən ɪf/</span><br><span class="character-portuguese-phonetics">(ként SÍI mai-SÉLF... ÍI-vãn êf)</span><span class="details-translation">Eu não consigo <strong>me ver (me imaginar)</strong> morando em outro país <strong>mesmo se</strong> eu tivesse a chance.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Furthermore</span>, we need to <span class="example-word">see to it</span> that all rules are followed. <button class="audio-btn-inline" onclick="playAudio('Furthermore, we need to see to it that all rules are followed.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈfɜːrðərmɔːr... siː tuː ɪt/</span><br><span class="character-portuguese-phonetics">(FÃR-dhãr-mor... SÍI túu êt)</span><span class="details-translation"><strong>Além disso</strong>, precisamos <strong>garantir / cuidar disso</strong> para que todas as regras sejam seguidas.</span></td>
-                    </tr>
-                    <tr>
-                        <td>If I had paid more attention, I <span class="example-word">would have seen</span> the warning signs. <button class="audio-btn-inline" onclick="playAudio('If I had paid more attention, I would have seen the warning signs.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wʊd həv siːn/</span><br><span class="character-portuguese-phonetics">(uúd ræv SÍIN)</span><span class="details-translation">Se eu tivesse prestado mais atenção, eu <strong>teria visto</strong> os sinais de alerta. (3rd Conditional)</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Despite</span> the darkness, he could <span class="example-word">see through</span> their lies. <button class="audio-btn-inline" onclick="playAudio('Despite the darkness, he could see through their lies.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/dɪˈspaɪt... kʊd siː θruː/</span><br><span class="character-portuguese-phonetics">(di-SPÁIT... cúd SÍI THRÚU)</span><span class="details-translation"><strong>Apesar da</strong> escuridão (figurativa), ele conseguia <strong>enxergar através (perceber)</strong> as mentiras deles.</span></td>
-                    </tr>
-                    <tr>
-                        <td>Let me <span class="example-word">see if</span> I understood you correctly. <button class="audio-btn-inline" onclick="playAudio('Let me see if I understood you correctly.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/let miː siː ɪf/</span><br><span class="character-portuguese-phonetics">(lét míi SÍI êf)</span><span class="details-translation">Deixe-me <strong>ver / verificar se</strong> eu entendi você corretamente.</span></td>
-                    </tr>
-                    <tr>
-                        <td>She is <span class="example-word">seeing someone</span> new <span class="connective">since</span> her divorce. <button class="audio-btn-inline" onclick="playAudio('She is seeing someone new since her divorce.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɪz ˈsiːɪŋ ˈsʌmwʌn... sɪns/</span><br><span class="character-portuguese-phonetics">(êz SÍI-in SÂM-uãn... SÊNS)</span><span class="details-translation">Ela está <strong>saindo/namorando com alguém</strong> novo <strong>desde</strong> o seu divórcio. (See = date).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Unless</span> they <span class="example-word">see</span> a return on investment, they won't fund the project. <button class="audio-btn-inline" onclick="playAudio('Unless they see a return on investment, they won\'t fund the project.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ənˈles ðeɪ siː/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS dhêi SÍI)</span><span class="details-translation"><strong>A menos que</strong> eles <strong>vejam</strong> um retorno sobre o investimento, eles não financiarão o projeto.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">As long as</span> you can <span class="example-word">see the big picture</span>, the details don't matter. <button class="audio-btn-inline" onclick="playAudio('As long as you can see the big picture, the details don\'t matter.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/æz lɔːŋ æz... siː ðə bɪɡ ˈpɪktʃər/</span><br><span class="character-portuguese-phonetics">(éz LONG éz... SÍI dhã BÊG PÊK-tchãr)</span><span class="details-translation"><strong>Contanto que</strong> você consiga <strong>ver o quadro geral</strong>, os detalhes não importam.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He hasn't <span class="example-word">been seen</span> in public <span class="connective">for</span> over a decade. <button class="audio-btn-inline" onclick="playAudio('He hasn\'t been seen in public for over a decade.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈhæznt bɪn siːn... fɔːr/</span><br><span class="character-portuguese-phonetics">(RÉ-zãnt bên SÍIN... fór)</span><span class="details-translation">Ele não <strong>tem sido visto (foi visto)</strong> em público <strong>por</strong> mais de uma década. (Passive Voice + Present Perfect).</span></td>
-                    </tr>
-                    <tr>
-                        <td>We will <span class="example-word">see off</span> our friends at the airport <span class="connective">tomorrow</span>. <button class="audio-btn-inline" onclick="playAudio('We will see off our friends at the airport tomorrow.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wɪl siː ɔːf/</span><br><span class="character-portuguese-phonetics">(uêl SÍI ÓF)</span><span class="details-translation">Nós iremos <strong>nos despedir de (acompanhar até a partida)</strong> nossos amigos no aeroporto <strong>amanhã</strong>.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Therefore</span>, it remains to <span class="example-word">be seen</span> whether this will work. <button class="audio-btn-inline" onclick="playAudio('Therefore, it remains to be seen whether this will work.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈðerfɔːr ɪt rɪˈmeɪnz tə biː siːn/</span><br><span class="character-portuguese-phonetics">(DHÉR-for êt ri-MÊINZ tã bíi SÍIN)</span><span class="details-translation"><strong>Portanto</strong>, resta <strong>ver (descobrir no futuro)</strong> se isso vai funcionar.</span></td>
-                    </tr>
-                    <tr>
-                        <td>They <span class="example-word">were seen</span> running away <span class="connective">right after</span> the explosion. <button class="audio-btn-inline" onclick="playAudio('They were seen running away right after the explosion.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wər siːn ˈrʌnɪŋ... raɪt ˈæftər/</span><br><span class="character-portuguese-phonetics">(uãr SÍIN RÂ-nin... ráit ÉF-tãr)</span><span class="details-translation">Eles <strong>foram vistos</strong> fugindo correndo <strong>logo após</strong> a explosão. (Passive Voice).</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- BARRA DE PESQUISA -->
+        <div class="search-box">
+            <input type="text" id="sentenceSearch" class="search-input" placeholder="🔍 Pesquisar nas 95 frases (ex: took, taking, take off, take over, Mortal Kombat, avião, restaurante)..." onkeyup="filterSentences()">
         </div>
 
-        <!-- ================= VERBO 9: KNOW ================= -->
-        <h2>9. KNOW (Saber, Conhecer, Ter conhecimento...)</h2>
-        
-        <div class="nota-dica">
-            <h4>🚨 Não Confunda: KNOW vs. MEET</h4>
-            <p>Em inglês, você usa <strong>MEET</strong> quando conhece alguém pela primeira vez. <strong>KNOW</strong> é usado para dizer que você <em>já conhece</em> a pessoa de longa data ou para expressar conhecimento de um fato.<br>
-            Ex: "I want to <strong>meet</strong> your brother" (conhecer a primeira vez) vs "I have <strong>known</strong> him for years" (conheço de longa data).
-            </p>
-        </div>
+        <!-- CONTAINER DAS 95 FRASES PRÁTICAS -->
+        <div id="sentences-container"></div>
 
-        <div class="table-responsive-wrapper">
-            <table>
-                <thead>
-                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="connective">As far as</span> I <span class="example-word">know</span>, the meeting is still on. <button class="audio-btn-inline" onclick="playAudio('As far as I know, the meeting is still on.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/æz fɑːr æz aɪ noʊ/</span><br><span class="character-portuguese-phonetics">(éz FÁR éz ái NÔU)</span><span class="details-translation"><strong>Até onde (Pelo que)</strong> eu <strong>sei</strong>, a reunião ainda está confirmada.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Had I known</span> about her situation, I would have offered help. <button class="audio-btn-inline" onclick="playAudio('Had I known about her situation, I would have offered help.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæd aɪ noʊn/</span><br><span class="character-portuguese-phonetics">(RÉD ái NÔUN)</span><span class="details-translation"><strong>Tivesse eu sabido (Se eu soubesse)</strong> sobre a situação dela, eu teria oferecido ajuda.</span></td>
-                    </tr>
-                    <tr>
-                        <td>They <span class="example-word">have known</span> each other <span class="connective">since</span> kindergarten. <button class="audio-btn-inline" onclick="playAudio('They have known each other since kindergarten.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæv noʊn iːtʃ ˈʌðər sɪns/</span><br><span class="character-portuguese-phonetics">(rév NÔUN íitch Â-dhãr SÊNS)</span><span class="details-translation">Eles <strong>se conhecem</strong> <strong>desde</strong> o jardim de infância. (Present Perfect para tempo prolongado).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Moreover</span>, she <span class="example-word">knows how to</span> code in three programming languages. <button class="audio-btn-inline" onclick="playAudio('Moreover, she knows how to code in three programming languages.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/mɔːrˈoʊvər... noʊz haʊ tuː koʊd/</span><br><span class="character-portuguese-phonetics">(mor-ÔU-vãr... NÔUZ RÁU túu côud)</span><span class="details-translation"><strong>Além do mais</strong>, ela <strong>sabe (como)</strong> programar em três linguagens de programação. (Saber fazer algo).</span></td>
-                    </tr>
-                    <tr>
-                        <td>I didn't <span class="example-word">know</span> <span class="connective">whether</span> to laugh or cry. <button class="audio-btn-inline" onclick="playAudio('I didn\'t know whether to laugh or cry.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈdɪdnt noʊ ˈweðər/</span><br><span class="character-portuguese-phonetics">(DÊ-dãnt NÔU UÉ-dhãr)</span><span class="details-translation">Eu não <strong>sabia</strong> <strong>se</strong> devia rir ou chorar. (Whether = se para opções/alternativas).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Although</span> he claims ignorance, I am sure he <span class="example-word">knew</span> everything. <button class="audio-btn-inline" onclick="playAudio('Although he claims ignorance, I am sure he knew everything.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... nuː ˈevriθɪŋ/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... NÚU E-vri-thin)</span><span class="details-translation"><strong>Embora</strong> ele alegue ignorância, tenho certeza que ele <strong>sabia</strong> de tudo.</span></td>
-                    </tr>
-                    <tr>
-                        <td>It is a <span class="example-word">well-known</span> fact that smoking causes cancer. <button class="audio-btn-inline" onclick="playAudio('It is a well-known fact that smoking causes cancer.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wel noʊn fækt/</span><br><span class="character-portuguese-phonetics">(uél NÔUN fékt)</span><span class="details-translation">É um fato <strong>muito conhecido</strong> que fumar causa câncer. (Adjetivo composto).</span></td>
-                    </tr>
-                    <tr>
-                        <td>You <span class="example-word">never know</span> what might happen <span class="connective">unless</span> you try. <button class="audio-btn-inline" onclick="playAudio('You never know what might happen unless you try.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈnevər noʊ... ənˈles/</span><br><span class="character-portuguese-phonetics">(NÉ-vãr NÔU... ãn-LÉS)</span><span class="details-translation">Você <strong>nunca sabe</strong> o que pode acontecer <strong>a menos que</strong> você tente.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He <span class="example-word">is known for</span> his exceptional negotiation skills. <button class="audio-btn-inline" onclick="playAudio('He is known for his exceptional negotiation skills.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɪz noʊn fɔːr/</span><br><span class="character-portuguese-phonetics">(êz NÔUN fór)</span><span class="details-translation">Ele <strong>é conhecido por</strong> suas habilidades excepcionais de negociação. (Voz Passiva).</span></td>
-                    </tr>
-                    <tr>
-                        <td>Before I <span class="example-word">knew it</span>, the year was already over. <button class="audio-btn-inline" onclick="playAudio('Before I knew it, the year was already over.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/bɪˈfɔːr aɪ nuː ɪt/</span><br><span class="character-portuguese-phonetics">(bi-FÓR ái NÚU êt)</span><span class="details-translation">Antes que eu <strong>percebesse (soubesse)</strong>, o ano já tinha acabado. (Expressão).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Consequently</span>, we are <span class="example-word">in the know</span> about the upcoming merger. <button class="audio-btn-inline" onclick="playAudio('Consequently, we are in the know about the upcoming merger.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈkɑːnsəkwentli... ɪn ðə noʊ/</span><br><span class="character-portuguese-phonetics">(CÓN-sẽ-cuênt-li... ên dhã NÔU)</span><span class="details-translation"><strong>Consequentemente</strong>, nós <strong>estamos informados / a par (in the know)</strong> sobre a futura fusão.</span></td>
-                    </tr>
-                    <tr>
-                        <td>She <span class="example-word">made it known</span> that she was unhappy with the results. <button class="audio-btn-inline" onclick="playAudio('She made it known that she was unhappy with the results.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/meɪd ɪt noʊn/</span><br><span class="character-portuguese-phonetics">(MÊID êt NÔUN)</span><span class="details-translation">Ela <strong>deixou claro / tornou público</strong> que ela estava infeliz com os resultados.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Even if</span> he <span class="example-word">knew</span> the answer, he wouldn't tell us. <button class="audio-btn-inline" onclick="playAudio('Even if he knew the answer, he wouldn\'t tell us.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈiːvən ɪf hiː nuː/</span><br><span class="character-portuguese-phonetics">(ÍI-vãn êf ríi NÚU)</span><span class="details-translation"><strong>Mesmo se</strong> ele <strong>soubesse</strong> a resposta, ele não nos contaria. (2nd Conditional).</span></td>
-                    </tr>
-                    <tr>
-                        <td>I <span class="example-word">don't know of</span> any restaurants open at this hour. <button class="audio-btn-inline" onclick="playAudio('I don\'t know of any restaurants open at this hour.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/doʊnt noʊ əv/</span><br><span class="character-portuguese-phonetics">(dôunt NÔU ãv)</span><span class="details-translation">Eu <strong>desconheço a existência de (não sei de)</strong> nenhum restaurante aberto a essa hora.</span></td>
-                    </tr>
-                    <tr>
-                        <td>Not <span class="connective">that</span> I <span class="example-word">know of</span>. <button class="audio-btn-inline" onclick="playAudio('Not that I know of.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/nɑːt ðæt aɪ noʊ əv/</span><br><span class="character-portuguese-phonetics">(NÓT dhét ái NÔU ãv)</span><span class="details-translation">Não <strong>que</strong> eu <strong>saiba</strong>. (Resposta curta muito comum).</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- ================= VERBO 10: SAY ================= -->
-        <h2>10. SAY (Dizer, Afirmar, Declarar...)</h2>
-        
-        <div class="nota-dica">
-            <h4>🚨 Não Confunda: SAY vs. TELL</h4>
-            <p><strong>TELL</strong> exige obrigatoriamente que você especifique *para quem* a mensagem é dita (Ex: Tell <em>me</em>, Tell <em>him</em>).<br>
-            <strong>SAY</strong> foca no conteúdo da mensagem, e não para quem foi dito. Se quiser usar uma pessoa com "Say", use a preposição "to" (Ex: He said <em>to me</em> that...).
-            </p>
-        </div>
-
-        <div class="table-responsive-wrapper">
-            <table>
-                <thead>
-                    <tr><th style="width: 50%;">Frase Avançada</th><th>IPA, Fonética e Tradução</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="connective">Needless to say</span>, the project was a massive failure. <button class="audio-btn-inline" onclick="playAudio('Needless to say, the project was a massive failure.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ˈniːdləs tə seɪ/</span><br><span class="character-portuguese-phonetics">(NÍID-lês tã SÊI)</span><span class="details-translation"><strong>Desnecessário dizer (Obviamente)</strong>, o projeto foi uma falha massiva.</span></td>
-                    </tr>
-                    <tr>
-                        <td>She <span class="example-word">is said to be</span> the smartest person in the room. <button class="audio-btn-inline" onclick="playAudio('She is said to be the smartest person in the room.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɪz sed tə biː/</span><br><span class="character-portuguese-phonetics">(êz SÉD tã bíi)</span><span class="details-translation"><strong>Diz-se que ela é</strong> a pessoa mais inteligente da sala. (Voz passiva impessoal).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Although</span> they <span class="example-word">had said</span> everything was fine, the company went bankrupt. <button class="audio-btn-inline" onclick="playAudio('Although they had said everything was fine, the company went bankrupt.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɔːlˈðoʊ... hæd sed/</span><br><span class="character-portuguese-phonetics">(ól-DHÔU... RED SÉD)</span><span class="details-translation"><strong>Embora</strong> eles <strong>tivessem dito</strong> que tudo estava bem, a empresa faliu. (Past Perfect).</span></td>
-                    </tr>
-                    <tr>
-                        <td>It <span class="example-word">goes without saying</span> that we value your contribution. <button class="audio-btn-inline" onclick="playAudio('It goes without saying that we value your contribution.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ɡoʊz wɪˈðaʊt ˈseɪɪŋ/</span><br><span class="character-portuguese-phonetics">(gôuz uí-DHÁUT SÊI-in)</span><span class="details-translation"><strong>Não é preciso nem dizer (É óbvio)</strong> que nós valorizamos sua contribuição.</span></td>
-                    </tr>
-                    <tr>
-                        <td>I would <span class="example-word">say</span> you are absolutely right, <span class="connective">nevertheless</span> we must test it. <button class="audio-btn-inline" onclick="playAudio('I would say you are absolutely right, nevertheless we must test it.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wʊd seɪ... ˌnevərðəˈles/</span><br><span class="character-portuguese-phonetics">(uúd SÊI... né-vãr-dhã-LÉS)</span><span class="details-translation">Eu <strong>diria</strong> que você está absolutamente certo, <strong>mesmo assim</strong> devemos testar.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He walked away <span class="connective">without</span> <span class="example-word">saying</span> a word. <button class="audio-btn-inline" onclick="playAudio('He walked away without saying a word.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wɪˈðaʊt ˈseɪɪŋ/</span><br><span class="character-portuguese-phonetics">(uí-DHÁUT SÊI-in)</span><span class="details-translation">Ele foi embora <strong>sem dizer</strong> uma palavra. (Preposição 'without' + Verbo-ing).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">As the saying goes</span>, don't judge a book by its cover. <button class="audio-btn-inline" onclick="playAudio('As the saying goes, don\'t judge a book by its cover.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/æz ðə ˈseɪɪŋ ɡoʊz/</span><br><span class="character-portuguese-phonetics">(éz dhã SÊI-in gôuz)</span><span class="details-translation"><strong>Como diz o ditado (provérbio)</strong>, não julgue um livro pela capa.</span></td>
-                    </tr>
-                    <tr>
-                        <td>That <span class="example-word">is to say</span>, the deadline has been moved up. <button class="audio-btn-inline" onclick="playAudio('That is to say, the deadline has been moved up.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ðæt ɪz tə seɪ/</span><br><span class="character-portuguese-phonetics">(dhét êz tã SÊI)</span><span class="details-translation"><strong>Ou seja / Em outras palavras</strong>, o prazo foi antecipado.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He hasn't <span class="example-word">had a say</span> in this decision <span class="connective">yet</span>. <button class="audio-btn-inline" onclick="playAudio('He hasn\'t had a say in this decision yet.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/hæznt hæd ə seɪ... jet/</span><br><span class="character-portuguese-phonetics">(RÉ-zãnt RED ã SÊI... iét)</span><span class="details-translation">Ele não <strong>teve voz / opinião (não pôde opinar)</strong> nesta decisão <strong>ainda</strong>.</span></td>
-                    </tr>
-                    <tr>
-                        <td>I can't <span class="example-word">say for sure</span> <span class="connective">whether</span> it will rain or not. <button class="audio-btn-inline" onclick="playAudio('I can\'t say for sure whether it will rain or not.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/kænt seɪ fər ʃʊr ˈweðər/</span><br><span class="character-portuguese-phonetics">(ként SÊI for xúr UÉ-dhãr)</span><span class="details-translation">Eu não posso <strong>dizer com certeza</strong> <strong>se</strong> vai chover ou não.</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">Unless</span> you <span class="example-word">say</span> otherwise, we will proceed as planned. <button class="audio-btn-inline" onclick="playAudio('Unless you say otherwise, we will proceed as planned.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/ənˈles juː seɪ ˈʌðərwaɪz/</span><br><span class="character-portuguese-phonetics">(ãn-LÉS iúu SÊI Â-dhãr-uáiz)</span><span class="details-translation"><strong>A menos que</strong> você <strong>diga</strong> o contrário, seguiremos como planejado.</span></td>
-                    </tr>
-                    <tr>
-                        <td>She <span class="example-word">said to herself</span> that she would never give up. <button class="audio-btn-inline" onclick="playAudio('She said to herself that she would never give up.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/sed tə hərˈself/</span><br><span class="character-portuguese-phonetics">(SÉD tã rãr-SÉLF)</span><span class="details-translation">Ela <strong>disse para si mesma</strong> que nunca iria desistir.</span></td>
-                    </tr>
-                    <tr>
-                        <td>What you are <span class="example-word">saying</span> contradicts the facts; <span class="connective">therefore</span>, we need proof. <button class="audio-btn-inline" onclick="playAudio('What you are saying contradicts the facts; therefore, we need proof.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wʌt juː ɑːr ˈseɪɪŋ... ˈðerfɔːr/</span><br><span class="character-portuguese-phonetics">(uót iúu ár SÊI-in... DHÉR-for)</span><span class="details-translation">O que você está <strong>dizendo</strong> contradiz os fatos; <strong>portanto</strong>, precisamos de provas.</span></td>
-                    </tr>
-                    <tr>
-                        <td>He <span class="example-word">would have said</span> something, <span class="connective">had he been given</span> the chance. <button class="audio-btn-inline" onclick="playAudio('He would have said something, had he been given the chance.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/wʊd həv sed... hæd hiː bɪn ˈɡɪvən/</span><br><span class="character-portuguese-phonetics">(uúd ræv SÉD... réd ríi bên GÊ-vãn)</span><span class="details-translation">Ele <strong>teria dito</strong> algo, <strong>tivesse sido dada a ele (se lhe dessem)</strong> a chance. (Condicional Invertida Passiva).</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="connective">To say the least</span>, the meal was disappointing. <button class="audio-btn-inline" onclick="playAudio('To say the least, the meal was disappointing.')">🔊</button></td>
-                        <td><span class="ipa-symbol">/tə seɪ ðə liːst/</span><br><span class="character-portuguese-phonetics">(tã SÊI dhã LÍIST)</span><span class="details-translation"><strong>Para dizer o mínimo</strong>, a refeição foi decepcionante.</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- ================= QUIZ INTERATIVO PARTE 2 ================= -->
-        <section id="quiz-interativo">
-            <h2>Quiz Interativo Final - Parte 2 🧠</h2>
-            <p>Teste as nuances de GO, COME, SEE, KNOW e SAY. Clique na opção para ver o resultado na hora!</p>
+        <!-- QUIZ INTERATIVO -->
+        <section id="quiz-interativo" style="margin-top: 35px;">
+            <h2>Quiz Interativo: Pense em Cenas e Blocos com "TAKE" 🧠</h2>
+            <p>Clique na alternativa correta para ver se você captou a essência visual do verbo TAKE e seus Phrasal Verbs:</p>
             
             <div class="quiz-container">
                 <div class="quiz-question">
-                    <p><strong>1.</strong> Ao atender ao telefone, sua mãe pede para você ir até a cozinha onde ela está. Qual é a forma correta que um nativo diria "Estou indo!"?</p>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">a) I am going!</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q1')">b) I am coming!</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">c) I am seeing!</button>
+                    <p><strong>1.</strong> Você está viajando na gringa e entrega seu celular para alguém tirar uma foto sua e da sua família. Qual é o bloco correto que você diz?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q1', 'Incorreto! Make a picture não existe nesse contexto, pois você não fabrica a foto com as mãos.')">a) Can you make a picture of us?</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q1', 'Perfeito! O bloco natural para tirar foto é sempre TAKE A PICTURE ou TAKE A PHOTO.')">b) Can you take a picture of us?</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q1', 'Incorreto! Do a picture não é usado para fotografias.')">c) Can you do a picture of us?</button>
                     <div id="feedback-q1" class="quiz-feedback"></div>
                 </div>
 
                 <div class="quiz-question">
-                    <p><strong>2.</strong> Complete corretamente: "I want to _______ your brother. I've heard a lot about him, but we've never spoken." (Conhecer pela primeira vez)</p>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q2')">a) know</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q2')">b) meet</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q2')">c) see</button>
+                    <p><strong>2.</strong> Qual é a diferença visual entre <strong>"Take your glasses off"</strong> e <strong>"Take your phone out of your bag"</strong>?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q2', 'Exato! OFF desprende algo que estava conectado a uma superfície (rosto/corpo/chão), enquanto OUT tira algo de dentro de um recipiente (bolso/bolsa/casa).')">a) "Off" é desprender/remover de uma superfície (rosto), e "Out" é tirar de dentro para fora (bolsa).</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q2', 'Incorreto! A lógica das partículas mostra cenas espaciais bem diferentes.')">b) Não há diferença nenhuma, podemos trocar "off" por "out" em qualquer frase.</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q2', 'Incorreto! Quem indica movimento de volta é a partícula BACK.')">c) "Off" significa devolver para a loja e "Out" significa decolar.</button>
                     <div id="feedback-q2" class="quiz-feedback"></div>
                 </div>
 
                 <div class="quiz-question">
-                    <p><strong>3.</strong> Traduza o phrasal verb nesta frase: "I didn't expect the alarm to <strong>go off</strong>."</p>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q3')">a) O alarme ser desligado.</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q3')">b) O alarme disparar.</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q3')">c) O alarme ir embora.</button>
+                    <p><strong>3.</strong> Se você disser algo que se arrependeu em uma discussão e quiser dizer <strong>"Eu retiro o que eu disse!"</strong> (trazendo as palavras de volta), como você fala?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q3', 'I take it over significa eu assumo o controle disso.')">a) I take it over!</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q3', 'I take it up significa eu começo a praticar isso.')">b) I take it up!</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q3', 'Isso mesmo! BACK traz a ideia de volta: devolver um produto à loja, voltar no tempo com uma música ou retirar o que disse (I take it back!).')">c) I take it back!</button>
                     <div id="feedback-q3" class="quiz-feedback"></div>
                 </div>
 
                 <div class="quiz-question">
-                    <p><strong>4.</strong> "He _______ me that the project was cancelled." Qual verbo preenche a lacuna corretamente considerando que há a pessoa (me) especificada após o verbo?</p>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q4')">a) said</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q4')">b) spoke</button>
-                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q4')">c) told</button>
+                    <p><strong>4.</strong> Qual é a diferença entre <strong>"take over a project"</strong> e <strong>"take on a project"</strong> no ambiente de trabalho?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q4', 'Excelente visão! Take OVER assume o comando/volante de algo que já acontecia; Take ON coloca uma nova responsabilidade ou desafio sobre os seus ombros.')">a) "Take over" é assumir o controle/comando no lugar de alguém; "Take on" é aceitar assumir a responsabilidade/carga de um novo projeto.</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q4', 'Incorreto! Desistir de um projeto seria give up ou quit.')">b) "Take over" é desistir do projeto e "Take on" é cancelar a reunião.</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q4', 'Incorreto! Puxar a alguém da família é take after.')">c) Ambos significam puxar à personalidade do chefe.</button>
                     <div id="feedback-q4" class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>5.</strong> Quando uma música toca no rádio e você diz <em>"Wow, this song takes me back to high school!"</em>, o que está acontecendo na cena?</p>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q5', 'Ocupar muito espaço de armazenamento seria takes up too much storage.')">a) A música ocupa muito espaço no celular.</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, true, 'q5', 'Perfeito! Takes me back leva a sua memória de volta no tempo, fazendo você lembrar da época do colégio.')">b) A música faz você voltar no tempo (lembrar da época do colégio).</button>
+                    <button class="quiz-btn" onclick="checkQuiz(this, false, 'q5', 'Não levar para o lado pessoal é Don\'t take it personally.')">c) Você está pedindo para não levarem a música para o lado pessoal.</button>
+                    <div id="feedback-q5" class="quiz-feedback"></div>
                 </div>
             </div>
         </section>
 
-        <section id="conclusao" style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
-            <h3>Fim da Parte 2 🥳</h3>
-            <p>Magnífico! Você acaba de devorar 75 frases avançadas utilizando os verbos mais enganosos da língua inglesa.</p>
-            <p>O domínio das locuções como <em>"goes without saying"</em>, <em>"come up with"</em> e <em>"see eye to eye"</em> fará seu inglês soar incrivelmente natural.</p>
-        </section>
-        
-        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu</button>
+        <!-- BOTÃO VOLTAR AO MENU PRINCIPAL (RODAPÉ) -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'" style="margin-top: 30px;">⬅ Voltar ao Menu Principal</button>
     </div>
 
-    <!-- SCRIPT DE ÁUDIO E QUIZ -->
     <script>
-        // SCRIPT DO ÁUDIO
+        // BASE COMPLETA COM 95 FRASES (AS 30 DE JOGOS DE LUTA NA ÍNTEGRA + 65 FRASES DAS DUAS TRANSCRIÇÕES)
+        const takeSections = [
+            {
+                title: "Bloco 1: Imperativo em Jogos de Luta – Comandos, Ameaças e Provocações (Frases 1 a 5)",
+                items: [
+                    [1, "<b>Take</b> this!", "/teɪk ðɪs/", "(Têic dhis)", "Toma essa!", "<strong>Comando Direto:</strong> Usado ao lançar um golpe ou projétil no adversário."],
+                    [2, "<b>Take</b> it easy, man!", "/teɪk ɪt ˈiːzi mæn/", "(Têic it í-zi, mén)", "Pega leve, cara! / Calma aí, cara!", "<strong>Bloco 'Take it easy':</strong> Significa pegar leve, relaxar ou ir com calma (também usado como despedida casual)."],
+                    [3, "<b>Take</b> the hit!", "/teɪk ðə hɪt/", "(Têic dhu rít)", "Leva o golpe! / Aceita o golpe!", "<strong>TAKE + Golpe/Dano:</strong> Em inglês, você 'takes' (recebe/absorve) um impacto."],
+                    [4, "Don't <b>take</b> it personally.", "/doʊnt teɪk ɪt ˈpɜːrsənəli/", "(Dôunt têic it pâr-so-na-li)", "Não leve pro lado pessoal.", "<strong>Expressão de Relação Humana:</strong> Essencial após ganhar de alguém ou quando alguém responde seco no trabalho."],
+                    [5, "<b>Take</b> your time, I'll wait.", "/teɪk jɔːr taɪm aɪl weɪt/", "(Têic iór táim, ail uêit)", "Pode demorar (Sem pressa), eu espero.", "<strong>Bloco 'Take your time':</strong> Diz para a outra pessoa fazer as coisas com calma, sem pressa."]
+                ]
+            },
+            {
+                title: "Bloco 2: Presente e Ações Frequentes nas Partidas (Frases 6 a 10)",
+                items: [
+                    [6, "I always <b>take</b> damage here.", "/aɪ ˈɔːlweɪz teɪk ˈdæmɪdʒ hɪr/", "(Ai óu-ueis têic dé-médj ríher)", "Eu sempre tomo dano aqui.", "<strong>Take damage:</strong> Collocation clássica dos games para 'sofrer/tomar dano'."],
+                    [7, "This combo <b>takes</b> half your life.", "/ðɪs ˈkɑːmboʊ teɪks hæf jɔːr laɪf/", "(Dhis cóm-bo têics ráf iór láif)", "Esse combo tira metade da sua vida.", "<strong>3ª Pessoa Singular (takes):</strong> 'This combo' (It) recebe -S no presente, no sentido de 'arrancar/tirar'."],
+                    [8, "You <b>take</b> too long to attack.", "/juː teɪk tuː lɔːŋ tuː əˈtæk/", "(Iu têic tú lóng tu a-téc)", "Você demora muito para atacar.", "<strong>TAKE + Tempo (too long):</strong> Sempre que 'take' se refere a tempo, significa 'demorar / levar tempo'."],
+                    [9, "I don't <b>take</b> risks against you.", "/aɪ doʊnt teɪk rɪsks əˈɡenst juː/", "(Ai dôunt têic rísks a-guénst iu)", "Eu não corro riscos contra você.", "<strong>Bloco 'Take a risk / Take risks':</strong> Em inglês não dizemos 'run a risk', dizemos 'take a risk'."],
+                    [10, "Do you <b>take</b> this game seriously?", "/duː juː teɪk ðɪs ɡeɪm ˈsɪriəsli/", "(Du iu têic dhis guêim sí-riâs-li?)", "Você leva esse jogo a sério?", "<strong>Take something seriously:</strong> Significa 'levar algo a sério'."]
+                ]
+            },
+            {
+                title: "Bloco 3: Passado – Danos, Vitórias e Consequências com TOOK (Frases 11 a 16)",
+                items: [
+                    [11, "You <b>took</b> my whole health bar!", "/juː tʊk maɪ hoʊl helθ bɑːr/", "(Iu túk mai rôul rélf bar)", "Você tirou toda a minha barra de vida!", "<strong>TOOK (Passado de Take):</strong> Ação concluída no round que acabou de passar."],
+                    [12, "I <b>took</b> a bad hit there.", "/aɪ tʊk ə bæd hɪt ðer/", "(Ai túk a béd rít dhér)", "Eu levei um golpe feio ali.", "<strong>Took a hit:</strong> Passado de 'take a hit' (levar uma pancada/golpe)."],
+                    [13, "He <b>took</b> me <b>down</b> fast.", "/hiː tʊk miː daʊn fæst/", "(Ri túk mi dáun fést)", "Ele me derrubou rápido.", "<strong>Phrasal Verb (Take down):</strong> Derrubar um oponente no chão ou derrotar."],
+                    [14, "I <b>took</b> the win!", "/aɪ tʊk ðə wɪn/", "(Ai túk dhu uín)", "Eu levei a vitória!", "<strong>Took the win:</strong> Conquistou / levou a vitória para si."],
+                    [15, "Did you <b>take</b> any damage?", "/dɪd juː teɪk ˈeni ˈdæmɪdʒ/", "(Did iu têic ê-ni dé-médj?)", "Você tomou algum dano?", "<strong>Regra do DID:</strong> Como a pergunta usa 'Did' no passado, o verbo principal volta para a forma base 'take'!"],
+                    [16, "I didn't <b>take</b> advantage of that.", "/aɪ ˈdɪdnt teɪk ədˈvæntɪdʒ əv ðæt/", "(Ai dí-dânt têic ad-vén-tédj óv dhét)", "Eu não tirei vantagem (não aproveitei) daquilo.", "<strong>Bloco 'Take advantage of':</strong> Aproveitar uma oportunidade ou brecha. Com 'didn't', usamos 'take'."]
+                ]
+            },
+            {
+                title: "Bloco 4: Futuro e Promessas no Jogo (Frases 17 a 21)",
+                items: [
+                    [17, "I will <b>take</b> you <b>down</b>.", "/aɪ wɪl teɪk juː daʊn/", "(Ail têic iu dáun)", "Eu vou te derrubar.", "<strong>Futuro com Will:</strong> Promessa direta durante a luta usando 'take down'."],
+                    [18, "This is going to <b>take</b> a while.", "/ðɪs ɪz ˈɡoʊɪŋ tə teɪk ə waɪl/", "(Dhis is góu-in tu têic a uáil)", "Isso vai demorar um pouco.", "<strong>Bloco 'Take a while':</strong> Demorar um tempo / levar um bom tempinho."],
+                    [19, "I'll <b>take</b> that round.", "/aɪl teɪk ðæt raʊnd/", "(Ail têic dhét ráund)", "Eu vou levar (garantir) esse round.", "<strong>I'll take:</strong> Decisão rápida ou conquista iminente."],
+                    [20, "You won't <b>take</b> another round from me.", "/juː woʊnt teɪk əˈnʌðər raʊnd frəm miː/", "(Iu uôunt têic a-nó-dher ráund fróm mi)", "Você não vai tirar outro round de mim.", "<strong>Won't take (Will not take):</strong> Negativa no futuro simples."],
+                    [21, "I'm gonna <b>take</b> your soul!", "/aɪm ˈɡɑːnə teɪk jɔːr soʊl/", "(Aim gó-na têic iór sôul)", "Eu vou levar a sua alma!", "<strong>Frase Clássica do Shang Tsung:</strong> 'Gonna' é a contração falada de 'going to' + verbo base 'take'."]
+                ]
+            },
+            {
+                title: "Bloco 5: Contínuo – Ações Acontecendo no Momento com TAKING (Frases 22 a 25)",
+                items: [
+                    [22, "Are you <b>taking</b> notes?", "/ɑːr juː ˈteɪkɪŋ noʊts/", "(Ar iu têi-quin nôuts?)", "Você tá anotando? (provocação clássica)", "<strong>Bloco 'Take notes':</strong> Em inglês, para dizer 'fazer anotações / anotar', usamos sempre 'take notes'."],
+                    [23, "You're <b>taking</b> too much damage!", "/jʊr ˈteɪkɪŋ tuː mʌtʃ ˈdæmɪdʒ/", "(Iur têi-quin tú mâtch dé-médj)", "Você está tomando muito dano!", "<strong>Present Continuous (are taking):</strong> Ação que está ocorrendo neste exato instante."],
+                    [24, "I'm <b>taking</b> a break after this.", "/aɪm ˈteɪkɪŋ ə breɪk ˈæftər ðɪs/", "(Aim têi-quin a brêic éf-ter dhis)", "Vou dar um tempo (fazer uma pausa) depois dessa.", "<strong>Present Continuous para Futuro Próximo:</strong> 'I'm taking a break' indica uma decisão já tomada para logo após a partida."],
+                    [25, "Stop <b>taking</b> my turns!", "/stɑːp ˈteɪkɪŋ maɪ tɜːrnz/", "(Stóp têi-quin mai târns)", "Pare de roubar meus turnos (minha vez)!", "<strong>Stop + Verbo-ING:</strong> Após o verbo 'stop', a ação que queremos interromper leva '-ing' (taking)."]
+                ]
+            },
+            {
+                title: "Bloco 6: Frases Complexas e Expressões de Combate (Frases 26 a 30)",
+                items: [
+                    [26, "If you miss that move, you <b>take</b> a full combo.", "/ɪf juː mɪs ðæt muːv juː teɪk ə fʊl ˈkɑːmboʊ/", "(If iu mís dhét múv, iu têic a fúl cóm-bo)", "Se você errar esse golpe, você leva um combo inteiro.", "<strong>Condicional Zero:</strong> Mostra uma consequência certa toda vez que você erra o golpe."],
+                    [27, "It <b>takes</b> a lot of practice to do that.", "/ɪt teɪks ə lɑːt əv ˈpræktɪs tə duː ðæt/", "(It têics a lót óv préc-tis tu dú dhét)", "Leva (Exige) muita prática para fazer isso.", "<strong>It takes + esforço/tempo:</strong> Indica o que é necessário para alcançar um resultado."],
+                    [28, "You need to <b>take</b> control of the match.", "/juː niːd tə teɪk kənˈtroʊl əv ðə mætʃ/", "(Iu níd tu têic con-trôul óv dhu métch)", "Você precisa assumir o controle da partida.", "<strong>Bloco 'Take control of':</strong> Assumir as rédeas / o domínio da situação."],
+                    [29, "Let me <b>take</b> a look at your character.", "/let miː teɪk ə lʊk æt jɔːr ˈkærəktər/", "(Lét mi têic a lúc at iór qué-rec-ter)", "Deixa eu dar uma olhada no seu personagem.", "<strong>Bloco 'Take a look at':</strong> Nunca desmonte essa estrutura; significa 'dar uma olhada em'."],
+                    [30, "I can't <b>take</b> this spam anymore!", "/aɪ kænt teɪk ðɪs spæm ˌeniˈmɔːr/", "(Ai cént têic dhis spém ê-ni-mór)", "Eu não aguento (suporto) mais essa apelação!", "<strong>Can't take it anymore:</strong> Quando 'take' significa suportar, tolerar ou aguentar algo irritante."]
+                ]
+            },
+            {
+                title: "Bloco 7: A Cena do Movimento Físico e Transporte (Take vs. Bring - Frases 31 a 43)",
+                items: [
+                    [31, "I'm <b>taking</b> my umbrella because it looks like rain.", "/aɪm ˈteɪkɪŋ maɪ ʌmˈbrelə bɪˈkɔːz ɪt lʊks laɪk reɪn/", "(Aim têi-quin mai âm-bré-la bi-cóz it lúcs láic rêin)", "Estou levando meu guarda-chuva porque parece que vai chover.", "<strong>Cena Visual:</strong> O guarda-chuva sai daqui de casa e acompanha você para outro lugar."],
+                    [32, "Can you <b>take</b> this pen to Sarah?", "/kæn juː teɪk ðɪs pen tə ˈserə/", "(Quén iu têic dhis pén tu Sé-ra?)", "Você pode levar essa caneta para a Sarah?", "<strong>Movimento para lá (Take):</strong> A caneta está aqui comigo e vai com você até onde a Sarah está."],
+                    [33, "It's cold outside; <b>take</b> your jacket.", "/ɪts koʊld ˌaʊtˈsaɪd teɪk jɔːr ˈdʒækɪt/", "(Its côuld áut-sáid; têic iór djé-quet)", "Está frio lá fora; leve a sua jaqueta.", "<strong>Take = Levar consigo:</strong> O objeto acompanha a pessoa que está saindo."],
+                    [34, "I'm going to travel, so I'm <b>taking</b> my laptop with me.", "/aɪm ˈɡoʊɪŋ tə ˈtrævl soʊ aɪm ˈteɪkɪŋ maɪ ˈlæptɑːp wɪθ miː/", "(Aim góu-in tu tré-vôl, sôu aim têi-quin mai lép-tóp uídh mi)", "Vou viajar, então vou levar meu notebook (laptop) comigo.", "<strong>Alerta de Vocabulário:</strong> Computador portátil em inglês é 'laptop'! 'Notebook' é caderno de papel."],
+                    [35, "<b>Take</b> the pen with you when you leave.", "/teɪk ðə pen wɪθ juː wen juː liːv/", "(Têic dhu pén uídh iu uén iu líiv)", "Leve a caneta com você quando sair.", "<strong>Contraste Take vs Bring:</strong> Como você está saindo daqui com o objeto, usamos 'Take' (se estivesse trazendo até mim, seria 'Bring the pen to me')."],
+                    [36, "How are you getting to Manhattan? — I'll <b>take</b> a taxi.", "/haʊ ɑːr juː ˈɡetɪŋ tə mænˈhætn aɪl teɪk ə ˈtæksi/", "(Ráu ar iu gué-tin tu Mén-ré-tãn? — Ail têic a téc-si)", "Como você vai até Manhattan? — Vou de táxi (Vou pegar um táxi).", "<strong>Cena de Transporte:</strong> Em inglês, 'Manhattan' pronuncia-se /mænˈhætn/. Com meios de transporte, usamos 'take'."],
+                    [37, "I'm <b>taking</b> the bus to work today.", "/aɪm ˈteɪkɪŋ ðə bʌs tə wɜːrk təˈdeɪ/", "(Aim têi-quin dhu bâs tu uârk tu-dêi)", "Eu vou de ônibus (Estou pegando o ônibus) para o trabalho hoje.", "<strong>Take the bus:</strong> Equivale ao nosso 'ir de ônibus' ou 'pegar o ônibus'."],
+                    [38, "We can <b>take</b> the train or <b>take</b> the subway.", "/wiː kæn teɪk ðə treɪn ɔːr teɪk ðə ˈsʌbweɪ/", "(Uí quén têic dhu trêin ór têic dhu sâb-uêi)", "Nós podemos pegar o trem (ir de trem) ou pegar o metrô.", "<strong>Meios de Transporte:</strong> Uma pessoa + um transporte + um destino = bloco com TAKE."],
+                    [39, "I'll <b>take</b> an early flight tomorrow morning.", "/aɪl teɪk ən ˈɜːrli flaɪt təˈmɑːroʊ ˈmɔːrnɪŋ/", "(Ail têic ãn âr-li fláit tu-mó-rou mór-nin)", "Vou pegar um voo cedo amanhã de manhã.", "<strong>Take a flight:</strong> Usado para embarcar em uma viagem de avião."],
+                    [40, "Did you <b>take</b> the highway or the local road?", "/dɪd juː teɪk ðə ˈhaɪweɪ ɔːr ðə ˈloʊkl roʊd/", "(Did iu têic dhu rái-uêi ór dhu lôu-côl rôud?)", "Você pegou a rodovia ou a estrada local?", "<strong>Take a road/route:</strong> Também usamos 'take' para escolher um caminho, rua ou rota no GPS."],
+                    [41, "<b>Take</b> the first right at the traffic light.", "/teɪk ðə fɜːrst raɪt æt ðə ˈtræfɪk laɪt/", "(Têic dhu fârst ráit ét dhu tré-fic láit)", "Pegue (Entre) na primeira à direita no semáforo.", "<strong>Direções na Cidade:</strong> Muito comum ao dar ou receber instruções de caminho."],
+                    [42, "She <b>takes</b> the kids to school every morning.", "/ʃiː teɪks ðə kɪdz tə skuːl ˈevri ˈmɔːrnɪŋ/", "(Xíi têics dhu quíds tu skúul é-vri mór-nin)", "Ela leva as crianças para a escola todas as manhãs.", "<strong>Levar Pessoas:</strong> Acompanhar ou conduzir alguém de um ponto a outro."],
+                    [43, "Don't forget to <b>take</b> your passport with you!", "/doʊnt fərˈɡet tə teɪk jɔːr ˈpæspɔːrt wɪθ juː/", "(Dôunt for-guét tu têic iór pés-pórt uídh iu!)", "Não se esqueça de levar o seu passaporte com você!", "<strong>Lembrete de Viagem:</strong> 'Take something with you' (levar algo consigo)."]
+                ]
+            },
+            {
+                title: "Bloco 8: Os Blocos do Dia a Dia e do Tempo (Sem Traduzir Palavra por Palavra - Frases 44 a 57)",
+                items: [
+                    [44, "I need to <b>take a shower</b> before dinner.", "/aɪ niːd tə teɪk ə ˈʃaʊər bɪˈfɔːr ˈdɪnər/", "(Ai níid tu têic a xáu-er bi-fór dí-ner)", "Eu preciso tomar um banho antes do jantar.", "<strong>Bloco Fechado:</strong> 'Take a shower' = tomar banho. Não traduza 'take' sozinho, grave o bloco inteiro!"],
+                    [45, "Let's <b>take a break</b> for fifteen minutes.", "/lets teɪk ə breɪk fɔːr ˌfɪfˈtiːn ˈmɪnɪts/", "(Léts têic a brêic fór fif-tíin mí-nits)", "Vamos fazer uma pausa por quinze minutos.", "<strong>Bloco 'Take a break':</strong> Veja como uma coisa só = fazer uma pausa / descansar um pouco."],
+                    [46, "He usually <b>takes a nap</b> after lunch.", "/hiː ˈjuːʒuəli teɪks ə næp ˈæftər lʌntʃ/", "(Ríi iú-ju-a-li têics a nép éf-ter lântch)", "Ele costuma tirar um cochilo depois do almoço.", "<strong>Bloco 'Take a nap':</strong> Tirar uma soneca / um cochilo rápido."],
+                    [47, "It's a lovely evening to <b>take a walk</b> in the park.", "/ɪts ə ˈlʌvli ˈiːvnɪŋ tə teɪk ə wɔːk ɪn ðə pɑːrk/", "(Its a lâv-li ív-nin tu têic a uóc in dhu párc)", "Está uma noite agradável para dar uma caminhada no parque.", "<strong>Bloco 'Take a walk':</strong> Dar um passeio / fazer uma caminhada."],
+                    [48, "Jess, <b>take a look</b> at this document, please.", "/dʒes teɪk ə lʊk æt ðɪs ˈdɑːkjəmənt pliːz/", "(Djés, têic a lúc ét dhis dó-qui-ment, plíiz)", "Jess, dá uma olhada neste documento, por favor.", "<strong>Bloco 'Take a look at':</strong> Assim como não desmontamos 'dar uma olhada' em português, usamos o bloco pronto em inglês."],
+                    [49, "Excuse me, can you <b>take a picture</b> of us?", "/ɪkˈskjuːz miː kæn juː teɪk ə ˈpɪktʃər əv ʌs/", "(Ecs-quiúz mi, quén iu têic a píc-tcher óv âs?)", "Com licença, você pode tirar uma foto da gente?", "<strong>Erro Clássico Evitado:</strong> Tirar foto é sempre 'take a picture' ou 'take a photo' (NUNCA 'make a picture'!)."],
+                    [50, "You have to <b>take medicine</b> three times a day.", "/juː hæv tə teɪk ˈmedɪsn θriː taɪmz ə deɪ/", "(Iu rév tu têic mé-di-sin thríi táims a dêi)", "Você tem que tomar remédio três vezes ao dia.", "<strong>Bloco 'Take medicine / pills':</strong> Para remédios, vitaminas e comprimidos, usamos sempre 'take' (nunca 'drink'!)."],
+                    [51, "<b>It takes</b> about 20 minutes to write this report.", "/ɪt teɪks əˈbaʊt ˈtwenti ˈmɪnɪts tə raɪt ðɪs rɪˈpɔːrt/", "(It têics a-báut tuên-ti mí-nits tu ráit dhis ri-pórt)", "Demora (Leva) uns 20 minutos para escrever este relatório.", "<strong>Tempo Necessário:</strong> 'It takes + tempo' indica quanto tempo uma atividade exige."],
+                    [52, "<b>It takes</b> two hours to fly from here to Miami.", "/ɪt teɪks tuː ˈaʊərz tə flaɪ frəm hɪr tə maɪˈæmi/", "(It têics tú áu-ers tu flái fróm ríher tu Mai-ê-mi)", "Leva duas horas para voar daqui até Miami.", "<strong>Duração de Viagem:</strong> Estrutura essencial para falar de deslocamentos."],
+                    [53, "<b>How long does it take</b> to get there?", "/haʊ lɔːŋ dʌz ɪt teɪk tə ɡet ðer/", "(Ráu lóng dâz it têic tu guét dhér?)", "Quanto tempo demora para chegar lá?", "<strong>Frase de Ouro para Viagem:</strong> Memorize este bloco! Combina 'How long does it take' (quanto demora) + 'to get there' (para chegar lá)."],
+                    [54, "Learning English <b>takes time</b>, so be patient with yourself.", "/ˈlɜːrnɪŋ ˈɪŋɡlɪʃ teɪks taɪm soʊ biː ˈpeɪʃnt wɪθ jɔːrˈself/", "(Lâr-nin Ín-glix têics táim, sôu bí pêi-xent uídh iór-sélf)", "Aprender inglês leva tempo, então seja paciente consigo mesmo.", "<strong>Bloco 'It takes time':</strong> Lembra que fluência é construção de conexões e leva tempo!"],
+                    [55, "Did you <b>take</b> your temperature this morning?", "/dɪd juː teɪk jɔːr ˈtemprətʃər ðɪs ˈmɔːrnɪŋ/", "(Did iu têic iór têm-pra-tcher dhis mór-nin?)", "Você mediu (tirou) a sua temperatura esta manhã?", "<strong>Bloco Médico:</strong> Medir febre ou pressão arterial usa 'take' (take your temperature / blood pressure)."],
+                    [56, "Everyone, please <b>take a seat</b>; the meeting is starting.", "/ˈevriwʌn pliːz teɪk ə siːt ðə ˈmiːtɪŋ ɪz ˈstɑːrtɪŋ/", "(É-vri-uãn, plíiz têic a síit; dhu míi-tin iz stár-tin)", "Pessoal, por favor, sentem-se (tomem um assento); a reunião está começando.", "<strong>Bloco Formal 'Take a seat':</strong> Maneira educada de convidar alguém para se sentar."],
+                    [57, "You should <b>take a deep breath</b> before speaking.", "/juː ʃʊd teɪk ə diːp breθ bɪˈfɔːr ˈspiːkɪŋ/", "(Iu xúd têic a díip bréth bi-fór spíi-quin)", "Você deveria respirar fundo antes de falar.", "<strong>Bloco 'Take a deep breath':</strong> Significa 'respirar fundo'."]
+                ]
+            },
+            {
+                title: "Bloco 9: O 'TAKE' das Escolhas, Decisões e Relação Humana (Frases 58 a 70)",
+                items: [
+                    [58, "What can I get for you? — <b>I'll take</b> a cappuccino, please.", "/wʌt kæn aɪ ɡet fɔːr juː aɪl teɪk ə ˌkæpəˈtʃiːnoʊ pliːz/", "(Uót quén ai guét fór iu? — Ail têic a ké-pu-tchíi-nou, plíiz)", "O que posso trazer pra você? — Vou querer um cappuccino, por favor.", "<strong>O TAKE das Escolhas:</strong> Em cafeterias e restaurantes, 'I'll take...' significa 'Eu vou querer / escolher...'."],
+                    [59, "At lunch, I think <b>I'll take</b> the grilled chicken.", "/æt lʌntʃ aɪ θɪŋk aɪl teɪk ðə ɡrɪld ˈtʃɪkɪn/", "(Ét lântch, ai thínk ail têic dhu gríld tchí-quen)", "No almoço, acho que vou querer o frango grelhado.", "<strong>Fazendo Pedidos:</strong> Muito natural na hora de escolher um prato do cardápio."],
+                    [60, "This shirt fits perfectly! <b>I'll take it</b>.", "/ðɪs ʃɜːrt fɪts ˈpɜːrfɪktli aɪl teɪk ɪt/", "(Dhis xârt fíts pâr-fect-li! Ail têic it)", "Esta camisa veste perfeitamente! Eu vou levar.", "<strong>Cena de Compras:</strong> Quando você experimenta uma roupa na loja e decide comprá-la, diga 'I'll take it!'."],
+                    [61, "You can have the blue one or the black one. — <b>I'll take</b> the black one.", "/juː kæn hæv ðə bluː wʌn ɔːr ðə blæk wʌn aɪl teɪk ðə blæk wʌn/", "(Iu quén rév dhu blú uãn ór dhu bléc uãn. — Ail têic dhu bléc uãn)", "Você pode ficar com o azul ou o preto. — Vou ficar com (escolher) o preto.", "<strong>Escolhendo entre Opções:</strong> A mesma lógica visual de pegar aquilo que você escolheu para vir com você."],
+                    [62, "If you want to speak fluently, <b>take my advice</b> and practice daily.", "/ɪf juː wɑːnt tə spiːk ˈfluːəntli teɪk maɪ ədˈvaɪs ænd ˈpræktɪs ˈdeɪli/", "(If iu uónt tu spíic flú-ent-li, têic mai ad-váis énd préc-tis dêi-li)", "Se você quer falar fluentemente, siga (aceite) meu conselho e pratique diariamente.", "<strong>Aceitando algo Abstrato:</strong> 'Take my advice' = aceitar / seguir o meu conselho."],
+                    [63, "A good leader always <b>takes responsibility</b> for the team.", "/ə ɡʊd ˈliːdər ˈɔːlweɪz teɪks rɪˌspɑːnsəˈbɪləti fɔːr ðə tiːm/", "(A gúd líi-der óu-ueis têics ris-pón-sa-bí-li-ti fór dhu tíim)", "Um bom líder sempre assume a responsabilidade pela equipe.", "<strong>Bloco 'Take responsibility':</strong> Assumir a responsabilidade (veja que traduzir por 'pegar' ficaria ridículo; enxergue o bloco!)."],
+                    [64, "Sometimes in life you just have to <b>take a chance</b>.", "/ˈsʌmtaɪmz ɪn laɪf juː dʒʌst hæv tə teɪk ə tʃæns/", "(Sâm-táims in láif iu djâst rév tu têic a tchéns)", "Às vezes na vida você só precisa arriscar (dar uma chance à sorte).", "<strong>Bloco 'Take a chance':</strong> Significa arriscar / tentar a sorte."],
+                    [65, "Sorry, I'm looking for my keys. — No problem, <b>take your time</b>.", "/ˈsɑːri aɪm ˈlʊkɪŋ fɔːr maɪ kiːz noʊ ˈprɑːbləm teɪk jɔːr taɪm/", "(Só-ri, aim lú-quin fór mai quíiz. — Nôu pró-blem, têic iór táim)", "Desculpe, estou procurando minhas chaves. — Sem problemas, pode ir com calma (sem pressa).", "<strong>Naturalidade Humana:</strong> Tira a pressão de quem está fazendo algo devagar."],
+                    [66, "Hey, <b>take Care</b>! See you on Monday.", "/heɪ teɪk ker siː juː ɑːn ˈmʌndeɪ/", "(Rêi, têic quér! Síi iu ón Mân-dêi)", "Ei, se cuida! Te vejo na segunda-feira.", "<strong>Despedida Afetuosa:</strong> 'Take care' é uma das despedidas mais comuns no trabalho e entre amigos."],
+                    [67, "Bye, guys! <b>Take it easy</b>!", "/baɪ ɡaɪz teɪk ɪt ˈiːzi/", "(Bái, gáis! Têic it í-zi!)", "Tchau, pessoal! Fiquem bem (Vão na paz / Até mais)!", "<strong>Despedida Casual Americana:</strong> Além de 'calma/relaxa', os americanos usam muito 'Take it easy' ao dar tchau."],
+                    [68, "<b>Don't take it personally</b>; maybe he's just having a bad day.", "/doʊnt teɪk ɪt ˈpɜːrsənəli ˈmeɪbi hiːz dʒʌst ˈhævɪŋ ə bæd deɪ/", "(Dôunt têic it pâr-so-na-li; mêi-bi ríiz djâst ré-vin a béd dêi)", "Não leve pro lado pessoal; talvez ele só esteja tendo um dia ruim.", "<strong>Inglês da Vida Real:</strong> Perfeito para acalmar um colega quando o chefe está estressado."],
+                    [69, "<b>Don't take this the wrong way</b>, but I think your shirt is inside out.", "/doʊnt teɪk ðɪs ðə rɔːŋ weɪ bʌt aɪ θɪŋk jɔːr ʃɜːrt ɪz ˌɪnˈsaɪd aʊt/", "(Dôunt têic dhis dhu róng uêi, bât ai thínk iór xârt iz in-sáid áut)", "Não me entenda mal, mas acho que sua camisa está do avesso.", "<strong>Bloco 'Don't take this the wrong way':</strong> Excelente para suavizar uma crítica ou comentário delicado."],
+                    [70, "Does this bakery <b>take</b> credit cards?", "/dʌz ðɪs ˈbeɪkəri teɪk ˈkredɪt kɑːrdz/", "(Dâz dhis bêi-que-ri têic cré-dit cárds?)", "Esta padaria aceita cartões de crédito?", "<strong>Take = Aceitar Pagamento:</strong> Muito comum no comércio ('We only take cash' = Só aceitamos dinheiro)."]
+                ]
+            },
+            {
+                title: "Bloco 10: Phrasal Verbs Visuais – OFF (Separação/Impulso), OUT (Para Fora) e IN (Para Dentro) (Frases 71 a 82)",
+                items: [
+                    [71, "I'm going to <b>take off</b> my jacket because it's warm here.", "/aɪm ˈɡoʊɪŋ tə teɪk ɔːf maɪ ˈdʒækɪt bɪˈkɔːz ɪts wɔːrm hɪr/", "(Aim góu-in tu têic óf mai djé-quet bi-cóz its uórm ríher)", "Vou tirar minha jaqueta porque está quente aqui.", "<strong>Imagem do OFF (Separação):</strong> A jaqueta estava no corpo (on) e se separa dele (off)."],
+                    [72, "Please <b>take</b> your shoes <b>off</b> before entering the house.", "/pliːz teɪk jɔːr ʃuːz ɔːf bɪˈfɔːr ˈentərɪŋ ðə haʊs/", "(Plíiz têic iór xúuz óf bi-fór ên-te-rin dhu ráus)", "Por favor, tire os sapatos antes de entrar na casa.", "<strong>Ordem Flexível:</strong> Podemos dizer 'take off your shoes' ou 'take your shoes off'."],
+                    [73, "Fasten your seatbelts; the plane <b>is taking off</b>!", "/ˈfæsn jɔːr ˈsiːtbelts ðə pleɪn ɪz ˈteɪkɪŋ ɔːf/", "(Fé-sãn iór síit-bélts; dhu plêin iz têi-quin óf!)", " Apertem os cintos; o avião está decolando!", "<strong>A Mesma Imagem de Separação:</strong> O avião estava preso ao chão e se desprende subindo (decola!)."],
+                    [74, "After she launched her channel, her career really <b>took off</b>.", "/ˈæftər ʃiː lɔːntʃt hər ˈtʃænl hər kəˈrɪr ˈrɪəli tʊk ɔːf/", "(Éf-ter xíi lóntcht râr tché-nôl, râr ca-ríher rí-li túk óf)", "Depois que ela lançou o canal dela, a carreira dela realmente decolou.", "<strong>Metáfora Igual ao Português:</strong> Algo estava parado e de repente ganhou impulso rápido!"],
+                    [75, "The <b>business</b> really <b>took off</b> in the second year.", "/ðə ˈbɪznəs ˈrɪəli tʊk ɔːf ɪn ðə ˈsekənd jɪr/", "(Dhu bíz-nes rí-li túk óf in dhu sé-când íer)", "O negócio realmente deslanchou (decolou) no segundo ano.", "<strong>Atenção à Pronúncia de BUSINESS:</strong> Nunca fale 'bú-zi-nes'! São apenas duas sílabas: /ˈbɪznəs/ (BÍZ-nes)."],
+                    [76, "<b>Take</b> your phone <b>out</b> of your pocket.", "/teɪk jɔːr foʊn aʊt əv jɔːr ˈpɑːkɪt/", "(Têic iór fôun áut óv iór pó-quet)", "Tire o seu celular do bolso.", "<strong>Imagem do OUT (De dentro para fora):</strong> O celular estava IN (dentro do bolso) e foi para OUT (fora)."],
+                    [77, "Honey, can you please <b>take out</b> the trash?", "/ˈhʌni kæn juː pliːz teɪk aʊt ðə træʃ/", "(Râ-ni, quén iu plíiz têic áut dhu tréx?)", "Querido, você pode por favor tirar (levar para fora) o lixo?", "<strong>Rotina nos EUA:</strong> 'Take out the trash' ou 'Take the trash out' desenha a cena de levar o lixo de dentro de casa para fora."],
+                    [78, "He <b>took</b> her <b>out</b> for dinner on their anniversary.", "/hiː tʊk hər aʊt fɔːr ˈdɪnər ɑːn ðer ˌænɪˈvɜːrsəri/", "(Ríi túk râr áut fór dí-ner ón dhér é-ni-vâr-sa-ri)", "Ele a levou para jantar fora no aniversário de casamento deles.", "<strong>Take someone out:</strong> Tirar alguém da rotina/casa para fazer um programa especial ou encontro (date)."],
+                    [79, "I <b>took</b> my mom <b>out</b> for dinner last night.", "/aɪ tʊk maɪ mɑːm aʊt fɔːr ˈdɪnər læst naɪt/", "(Ai túk mai móm áut fór dí-ner lést náit)", "Eu levei minha mãe para jantar fora ontem à noite.", "<strong>Contraste OFF vs OUT:</strong> 'I'm taking my glasses OFF' (desgrudando do rosto) vs 'Taking my mom OUT' (saindo de casa)."],
+                    [80, "We are too tired to cook; let's order some <b>takeout</b>.", "/wiː ɑːr tuː ˈtaɪərd tə kʊk lets ˈɔːrdər sʌm ˈteɪkaʊt/", "(Uí ar tú tái-erd tu cúc; léts ór-der sâm têic-áut)", "Estamos cansados demais para cozinhar; vamos pedir comida para viagem.", "<strong>Substantivo 'Takeout' (junto):</strong> Comida que sai do restaurante para você comer fora dali."],
+                    [81, "They have a big heart and <b>took in</b> a stray dog.", "/ðeɪ hæv ə bɪɡ hɑːrt ænd tʊk ɪn ə streɪ dɔːɡ/", "(Dhêi rév a bíg rárt énd túk in a strêi dóg)", "Eles têm um coração grande e acolheram um cachorro de rua.", "<strong>Imagem do IN (Entrada):</strong> O cão estava na rua e eles o trouxeram para dentro de casa e da família."],
+                    [82, "Give me a second to <b>take in</b> everything you just said.", "/ɡɪv miː ə ˈsekənd tə teɪk ɪn ˈevriθɪŋ juː dʒʌst sed/", "(Guív mi a sé-când tu têic in é-vri-thin iu djâst séd)", "Me dê um segundo para assimilar (absorver/processar) tudo o que você acabou de dizer.", "<strong>Metáfora Mental do IN:</strong> A informação precisa 'entrar' na sua cabeça e ser digerida."]
+                ]
+            },
+            {
+                title: "Bloco 11: Phrasal Verbs Visuais – BACK (Volta), OVER (Controle), UP (Ocupar), ON (Carga), AFTER e TO (Frases 83 a 95)",
+                items: [
+                    [83, "The shirt doesn't fit, so I'm going to <b>take</b> it <b>back</b> to the store.", "/ðə ʃɜːrt ˈdʌznt fɪt soʊ aɪm ˈɡoʊɪŋ tə teɪk ɪt bæk tə ðə stɔːr/", "(Dhu xârt dâ-zânt fít, sôu aim góu-in tu têic it béc tu dhu stór)", "A camisa não serve, então vou levá-la de volta (devolver) para a loja.", "<strong>Imagem do BACK (Retorno):</strong> O produto faz o caminho de volta para a loja."],
+                    [84, "I need to <b>take</b> this book <b>back</b> to the library.", "/aɪ niːd tə teɪk ðɪs bʊk bæk tə ðə ˈlaɪbreri/", "(Ai níid tu têic dhis búc béc tu dhu lái-bre-ri)", "Eu preciso devolver este livro para a biblioteca.", "<strong>Take back = Devolver:</strong> Levar de volta ao lugar de onde saiu."],
+                    [85, "I shouldn't have said that. <b>I take it back</b>!", "/aɪ ˈʃʊdnt hæv sed ðæt aɪ teɪk ɪt bæk/", "(Ai xú-dânt rév séd dhét. Ai têic it béc!)", "Eu não deveria ter dito aquilo. Eu retiro o que disse!", "<strong>Retirar Palavras:</strong> Você falou algo ruim e quer puxar a palavra de volta para cancelar o que disse."],
+                    [86, "Wow, that song <b>takes me back</b> to high school!", "/waʊ ðæt sɔːŋ teɪks miː bæk tə haɪ skuːl/", "(Uáu, dhét sóng têics mi béc tu rái skúul!)", "Uau, essa música me faz voltar no tempo (para a época do colégio)!", "<strong>Memória Afetiva:</strong> Quando uma música, cheiro ou foto transporta sua mente de volta ao passado."],
+                    [87, "The company was <b>taken over</b> by a larger competitor.", "/ðə ˈkʌmpəni wəz ˈteɪkən ˈoʊvər baɪ ə ˈlɑːrdʒər kəmˈpetɪtər/", "(Dhu câm-pa-ni uóz têi-cãn ôu-ver bái a lár-djer com-pé-ri-tor)", "A empresa foi comprada (assumida) por um concorrente maior.", "<strong>Imagem do OVER (Passar a ficar por cima/no comando):</strong> Dica de pronúncia: 'competitor' soa com R suave nos EUA (com-pé-ri-tor)."],
+                    [88, "You look exhausted. Go rest; <b>I'll take over</b> from here.", "/juː lʊk ɪɡˈzɔːstɪd ɡoʊ rest aɪl teɪk ˈoʊvər frəm hɪr/", "(Iu lúc ig-zós-ted. Gôu rést; ail têic ôu-ver fróm ríher)", "Você parece exausto. Vá descansar; eu assumo daqui para frente.", "<strong>Transferência de Controle:</strong> Muito usado no trabalho ou revezando a direção em uma viagem longa."],
+                    [89, "This huge box <b>takes up</b> too much space in the living room.", "/ðɪs hjuːdʒ bɑːks teɪks ʌp tuː mʌtʃ speɪs ɪn ðə ˈlɪvɪŋ ruːm/", "(Dhis riúdj bócs têics âp tú mâtch spêis in dhu lí-vin rúum)", "Esta caixa enorme ocupa espaço demais na sala de estar.", "<strong>Imagem do UP (Preencher/Ocupar):</strong> Pode ocupar espaço físico (space), tempo (took up my morning) ou memória do celular (takes up storage)."],
+                    [90, "I <b>took up</b> running last year, and my sister <b>took up</b> painting.", "/aɪ tʊk ʌp ˈrʌnɪŋ læst jɪr ænd maɪ ˈsɪstər tʊk ʌp ˈpeɪntɪŋ/", "(Ai túk âp râ-nin lést íer, énd mai sís-ter túk âp pêin-tin)", "Eu comecei a praticar corrida no ano passado, e minha irmã começou a pintar.", "<strong>Take up a hobby:</strong> A nova atividade passa a ocupar um lugar na sua rotina de vida!"],
+                    [91, "I can't <b>take on</b> any more work right now; I'm overwhelmed.", "/aɪ kænt teɪk ɑːn ˈeni mɔːr wɜːrk raɪt naʊ aɪm ˌoʊvərˈwelmd/", "(Ai cént têic ón ê-ni mór uârk ráit náo; aim ôu-ver-uélmd)", "Não consigo assumir mais trabalho agora; estou sobrecarregado.", "<strong>Imagem do ON (Colocar carga sobre si):</strong> Aceitar carregar uma nova responsabilidade, projeto ou função (take on a new role)."],
+                    [92, "We are ready to <b>take on</b> the challenge and <b>take on</b> Brazil tomorrow!", "/wiː ɑːr ˈredi tə teɪk ɑːn ðə ˈtʃælɪndʒ ænd teɪk ɑːn brəˈzɪl təˈmɑːroʊ/", "(Uí ar ré-di tu têic ón dhu tché-lendj énd têic ón Bra-zíl tu-mó-rou!)", "Estamos prontos para enfrentar o desafio e enfrentar o Brasil amanhã!", "<strong>Take on = Enfrentar:</strong> Colocar-se diante de um desafio ou adversário."],
+                    [93, "She really <b>takes after</b> her mother in personality.", "/ʃiː ˈrɪəli teɪks ˈæftər hər ˈmʌðər ɪn ˌpɜːrsəˈnæləti/", "(Xíi rí-li têics éf-ter râr mâ-dher in pâr-so-né-li-ti)", "Ela realmente puxou à mãe dela na personalidade.", "<strong>Imagem do AFTER (Seguir na linhagem):</strong> Vir depois de alguém da família e herdar o jeito ou aparência."],
+                    [94, "I <b>took to</b> her immediately; she is so welcoming!", "/aɪ tʊk tə hər ɪˈmiːdiətli ʃiː ɪz soʊ ˈwelkəmɪŋ/", "(Ai túk tu râr i-míi-di-at-li; xíi iz sôu uél-ca-min!)", "Eu fui com a cara dela (gostei dela) imediatamente; ela é tão acolhedora!", "<strong>Imagem do TO (Aproximação/Afinidade):</strong> Criar simpatia natural por alguém logo de cara."],
+                    [95, "She <b>took to</b> English very quickly once she stopped translating word by word.", "/ʃiː tʊk tuː ˈɪŋɡlɪʃ ˈveri ˈkwɪkli wʌns ʃiː stɑːpt trænsˈleɪtɪŋ wɜːrd baɪ wɜːrd/", "(Xíi túk tu Ín-glix vé-ri quíc-li uâns xíi stópt tréins-lêi-tin uârd bái uârd)", "Ela pegou o jeito (adaptou-se) ao inglês muito rápido assim que parou de traduzir palavra por palavra.", "<strong>Mensagem Final da Aula:</strong> Quando você enxerga cenas e blocos, o inglês flui naturalmente!"]
+                ]
+            }
+        ];
+
+        // RENDERIZA AS 95 FRASES EM TABELAS ORGANIZADAS
+        const container = document.getElementById('sentences-container');
+        let htmlOutput = '';
+
+        takeSections.forEach(section => {
+            htmlOutput += `
+            <div class="section-block">
+                <h2>${section.title}</h2>
+                <div class="table-responsive-wrapper">
+                    <table class="sentence-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 44%;">Frase em Inglês + Áudio</th>
+                                <th style="width: 56%;">Pronúncia (IPA + Simplificada), Tradução e Cena/Bloco</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+            section.items.forEach(item => {
+                const num = item[0];
+                const enHtml = item[1];
+                const ipa = item[2];
+                const phonetic = item[3];
+                const pt = item[4];
+                const explanation = item[5];
+
+                const cleanAudioText = enHtml.replace(/<\/?b>/g, '').replace(/—/g, ',').replace(/'/g, "\\'");
+
+                htmlOutput += `
+                            <tr class="sentence-row" data-search="${enHtml.toLowerCase()} ${pt.toLowerCase()} ${explanation.toLowerCase()} ${section.title.toLowerCase()}">
+                                <td>
+                                    <span class="num-badge">#${num}</span>
+                                    <span class="sentence-en">${enHtml}</span>
+                                    <button class="audio-btn-inline" onclick="playAudio('${cleanAudioText}')" title="Ouvir frase #${num}">🔊</button>
+                                </td>
+                                <td>
+                                    <span class="ipa-symbol">${ipa}</span>
+                                    <span class="character-portuguese-phonetics">${phonetic}</span>
+                                    <span class="details-translation">${pt}</span>
+                                    <span class="simple-explanation">🎬 ${explanation}</span>
+                                </td>
+                            </tr>`;
+            });
+
+            htmlOutput += `
+                        </tbody>
+                    </table>
+                </div>
+            </div>`;
+        });
+
+        container.innerHTML = htmlOutput;
+
+        // FILTRO DE PESQUISA NAS 95 FRASES
+        function filterSentences() {
+            const query = document.getElementById('sentenceSearch').value.toLowerCase();
+            const blocks = document.querySelectorAll('.section-block');
+
+            blocks.forEach(block => {
+                const rows = block.querySelectorAll('.sentence-row');
+                let visibleRows = 0;
+
+                rows.forEach(row => {
+                    const text = row.getAttribute('data-search');
+                    if (text.includes(query)) {
+                        row.style.display = '';
+                        visibleRows++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                block.style.display = visibleRows > 0 ? 'block' : 'none';
+            });
+        }
+
+        // LÓGICA DO QUIZ INTERATIVO
+        function checkQuiz(button, isCorrect, qId, explanation) {
+            const parent = button.parentElement;
+            const buttons = parent.querySelectorAll('.quiz-btn');
+            buttons.forEach(btn => btn.disabled = true);
+
+            const feedback = document.getElementById('feedback-' + qId);
+            feedback.style.display = 'block';
+
+            if (isCorrect) {
+                button.classList.add('correct');
+                feedback.innerHTML = "✅ " + explanation;
+                feedback.style.color = "#155724";
+            } else {
+                button.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correct');
+                    }
+                });
+                feedback.innerHTML = "❌ " + explanation;
+                feedback.style.color = "#721c24";
+            }
+        }
+
+        // SINTETIZADOR DE VOZ NATIVO (WEB SPEECH API)
         let voices = [];
         function loadVoices() { voices = window.speechSynthesis.getVoices(); }
         loadVoices();
-        if (window.speechSynthesis.onvoiceschanged !== undefined) { window.speechSynthesis.onvoiceschanged = loadVoices; }
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
 
         function playAudio(text) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
                 const utterance = new SpeechSynthesisUtterance(text);
-                utterance.rate = 0.85; 
+                utterance.rate = 0.85;
                 utterance.pitch = 1;
 
                 if (voices.length === 0) loadVoices();
@@ -698,39 +854,13 @@
                 if (!targetVoice) targetVoice = voices.find(voice => voice.lang === 'en-US');
                 if (!targetVoice) targetVoice = voices.find(voice => voice.lang.startsWith('en'));
 
-                if (targetVoice) { utterance.voice = targetVoice; utterance.lang = targetVoice.lang; } 
-                else { utterance.lang = 'en-US'; }
+                if (targetVoice) {
+                    utterance.voice = targetVoice;
+                    utterance.lang = targetVoice.lang;
+                } else {
+                    utterance.lang = 'en-US';
+                }
                 window.speechSynthesis.speak(utterance);
-            } else { alert("Desculpe, seu navegador não suporta reprodução de áudio."); }
-        }
-
-        // SCRIPT DO QUIZ
-        function checkAnswer(button, isCorrect, questionId) {
-            const questionDiv = button.parentElement;
-            const buttons = questionDiv.querySelectorAll('.quiz-btn');
-            buttons.forEach(btn => btn.disabled = true); 
-            
-            if (isCorrect) {
-                button.classList.add('correct');
-            } else {
-                button.classList.add('incorrect');
-                buttons.forEach(btn => {
-                    if (btn.getAttribute('onclick').includes('true')) {
-                        btn.style.border = '2px solid #28a745';
-                        btn.style.color = '#28a745';
-                        btn.style.fontWeight = 'bold';
-                    }
-                });
-            }
-
-            const feedbackDiv = document.getElementById('feedback-' + questionId);
-            feedbackDiv.style.display = 'block';
-            if (isCorrect) {
-                feedbackDiv.innerHTML = "✅ Excelente! Acertou em cheio.";
-                feedbackDiv.style.color = "#28a745";
-            } else {
-                feedbackDiv.innerHTML = "❌ Incorreto. Fique atento às dicas dadas no texto!";
-                feedbackDiv.style.color = "#dc3545";
             }
         }
     </script>
